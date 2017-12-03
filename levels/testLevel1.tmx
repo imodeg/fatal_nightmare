@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="2017.07.25" orientation="orthogonal" renderorder="right-down" width="1" height="1" tilewidth="4000" tileheight="1024" nextobjectid="47">
+ <tileset firstgid="1" name="Decoretions" tilewidth="1026" tileheight="486" tilecount="29" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="3">
+   <image width="387" height="102" source="graphics/Dirt_01.png"/>
+  </tile>
+  <tile id="4">
+   <image width="408" height="135" source="graphics/Dirt_02.png"/>
+  </tile>
+  <tile id="5">
+   <image width="387" height="102" source="graphics/Dirt_03.png"/>
+  </tile>
+  <tile id="6">
+   <image width="455" height="139" source="graphics/DirtPurp_01.png"/>
+  </tile>
+  <tile id="7">
+   <image width="384" height="139" source="graphics/DirtPurp_02.png"/>
+  </tile>
+  <tile id="8">
+   <image width="188" height="292" source="graphics/Decor01.png"/>
+  </tile>
+  <tile id="9">
+   <image width="86" height="270" source="graphics/Decor02.png"/>
+  </tile>
+  <tile id="10">
+   <image width="86" height="270" source="graphics/Decor03.png"/>
+  </tile>
+  <tile id="11">
+   <image width="146" height="181" source="graphics/Decor04.png"/>
+  </tile>
+  <tile id="12">
+   <image width="93" height="188" source="graphics/Decor05.png"/>
+  </tile>
+  <tile id="13">
+   <image width="230" height="344" source="graphics/Rock_01.png"/>
+  </tile>
+  <tile id="14">
+   <image width="172" height="227" source="graphics/Rock_02.png"/>
+  </tile>
+  <tile id="15">
+   <image width="226" height="234" source="graphics/Rock_03.png"/>
+  </tile>
+  <tile id="16">
+   <image width="160" height="127" source="graphics/Rock_04.png"/>
+  </tile>
+  <tile id="17">
+   <image width="1024" height="156" source="graphics/Gress_01.png"/>
+  </tile>
+  <tile id="18">
+   <image width="560" height="258" source="graphics/Gress_02.png"/>
+  </tile>
+  <tile id="19">
+   <image width="557" height="409" source="graphics/Tree01.png"/>
+  </tile>
+  <tile id="20">
+   <image width="436" height="301" source="graphics/Tree02.png"/>
+  </tile>
+  <tile id="21">
+   <image width="653" height="432" source="graphics/Tree03.png"/>
+  </tile>
+  <tile id="22">
+   <image width="1026" height="94" source="graphics/Flare_01.png"/>
+  </tile>
+  <tile id="23">
+   <image width="741" height="87" source="graphics/Flare_02.png"/>
+  </tile>
+  <tile id="24">
+   <image width="974" height="101" source="graphics/Flare_03.png"/>
+  </tile>
+  <tile id="25">
+   <image width="407" height="388" source="graphics/bed.png"/>
+  </tile>
+  <tile id="26">
+   <image width="367" height="164" source="graphics/bed2.png"/>
+  </tile>
+  <tile id="27">
+   <image width="251" height="443" source="graphics/Cabinet.png"/>
+  </tile>
+  <tile id="28">
+   <image width="296" height="261" source="graphics/Commode.png"/>
+  </tile>
+  <tile id="29">
+   <image width="220" height="188" source="graphics/lamp1.png"/>
+  </tile>
+  <tile id="30">
+   <image width="561" height="486" source="graphics/Light1.png"/>
+  </tile>
+  <tile id="31">
+   <image width="226" height="337" source="graphics/mirror.png"/>
+  </tile>
+ </tileset>
+ <objectgroup color="#000000" name="BackColor">
+  <object id="32" x="-124.242" y="457.576">
+   <properties>
+    <property name="color" type="color" value="#ff1e1518"/>
+   </properties>
+   <polygon points="0,0 363.636,-6.06061 672.727,51.5152 1275.76,51.5152 1690.91,-90.9091 2118.18,-75.7576 2572.73,51.5152 4406.06,36.3636 4303.03,645.455 15.1515,578.788"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="Back_Parallax_03" locked="1"/>
+ <objectgroup name="Back_Parallax_02" locked="1"/>
+ <objectgroup name="Back_Parallax_01" locked="1"/>
+ <objectgroup name="Back_03" locked="1">
+  <object id="26" gid="9" x="809.853" y="488.177" width="188" height="292" rotation="-0.724262"/>
+  <object id="27" gid="10" x="248" y="469" width="104" height="265"/>
+  <object id="28" gid="11" x="171.273" y="437.114" width="56.3676" height="198.81" rotation="9.20774"/>
+  <object id="29" gid="12" x="673.687" y="485.588" width="117.701" height="145.916" rotation="-6.42761"/>
+  <object id="30" gid="13" x="2494.82" y="463.365" width="76.1809" height="154" rotation="9.83188"/>
+  <object id="31" gid="10" x="1591.83" y="299.783" width="104" height="265" rotation="36.1654"/>
+ </objectgroup>
+ <objectgroup name="Back_02" locked="1">
+  <object id="1" gid="4" x="-97.4848" y="506.636" width="387" height="102"/>
+  <object id="3" gid="4" x="500.333" y="560.333" width="485.667" height="102"/>
+  <object id="2" gid="4" x="203.825" y="504.167" width="387" height="102" rotation="9.7483"/>
+  <object id="4" gid="5" x="1215.72" y="559.449" width="504.704" height="135" rotation="-17.7951"/>
+  <object id="5" gid="7" x="830.33" y="581" width="455" height="139"/>
+  <object id="11" gid="7" x="1570.33" y="446.333" width="455" height="139"/>
+  <object id="14" gid="7" x="1938.23" y="422.368" width="579.893" height="139" rotation="-342.234"/>
+  <object id="15" gid="7" x="2415.67" y="578.333" width="748.333" height="139"/>
+  <object id="16" gid="7" x="2990.33" y="627.667" width="1093.67" height="207"/>
+ </objectgroup>
+ <objectgroup name="Back_01" locked="1">
+  <object id="17" gid="8" x="538.975" y="599.398" width="597.333" height="139" rotation="-2.26141"/>
+  <object id="18" gid="8" x="1081.44" y="618.829" width="475.109" height="139" rotation="-19.1587"/>
+  <object id="19" gid="6" x="1436.33" y="445.667" width="471" height="134"/>
+  <object id="20" gid="8" x="1805.37" y="437.289" width="348" height="139" rotation="6.36277"/>
+ </objectgroup>
+ <objectgroup name="Collision" locked="1">
+  <object id="22" x="-37.3333" y="422.667">
+   <polygon points="0,0 254.667,-4 585.333,54.6667 754.667,165.333 0,157.333"/>
+  </object>
+  <object id="23" x="524" y="493.333">
+   <polygon points="0,0 40,-14.6667 633.333,-25.3333 746.667,90.6667 85.3333,92"/>
+  </object>
+  <object id="24" x="1148" y="473.333">
+   <polygon points="0,0 394.667,-137.333 848,-146.667 1328,-2.66667 64,92"/>
+  </object>
+  <object id="25" x="2433.33" y="462.667">
+   <polygon points="0,0 1690.67,-10.6667 1704,190.667 -34.6667,157.333"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="Front_03" locked="1"/>
+ <objectgroup name="Front_02" locked="1"/>
+ <objectgroup name="Front_01" locked="1">
+  <object id="40" gid="14" x="2785" y="480" width="230" height="344"/>
+ </objectgroup>
+ <objectgroup name="Front_Parallax_03" locked="1"/>
+ <objectgroup name="Front_Parallax_02" locked="1"/>
+ <objectgroup name="Front_Parallax_01" locked="1"/>
+ <objectgroup name="Entity">
+  <object id="37" type="Player" x="131.75" y="259.333"/>
+  <object id="38" type="Enemy_Tumbler" x="607" y="421"/>
+  <object id="39" type="Enemy_Tumbler" x="2774.33" y="333"/>
+ </objectgroup>
+</map>

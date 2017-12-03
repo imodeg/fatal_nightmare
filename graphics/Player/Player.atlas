@@ -1,0 +1,90 @@
+
+Player.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 329, 52
+  size: 79, 70
+  orig: 79, 70
+  offset: 0, 0
+  index: -1
+Eyes
+  rotate: false
+  xy: 460, 79
+  size: 36, 14
+  orig: 36, 14
+  offset: 0, 0
+  index: -1
+HairPrtLeft
+  rotate: false
+  xy: 409, 79
+  size: 50, 43
+  orig: 50, 43
+  offset: 0, 0
+  index: -1
+HairPrtRight
+  rotate: false
+  xy: 469, 47
+  size: 33, 31
+  orig: 33, 31
+  offset: 0, 0
+  index: -1
+HandLeft
+  rotate: true
+  xy: 460, 94
+  size: 28, 48
+  orig: 28, 48
+  offset: 0, 0
+  index: -1
+HandLeftPrt
+  rotate: false
+  xy: 0, 0
+  size: 19, 22
+  orig: 19, 22
+  offset: 0, 0
+  index: -1
+HandRight
+  rotate: false
+  xy: 244, 17
+  size: 37, 34
+  orig: 37, 34
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 244, 52
+  size: 84, 70
+  orig: 84, 70
+  offset: 0, 0
+  index: -1
+Katana
+  rotate: false
+  xy: 0, 23
+  size: 138, 99
+  orig: 138, 99
+  offset: 0, 0
+  index: -1
+KatanaLine
+  rotate: false
+  xy: 139, 35
+  size: 104, 87
+  orig: 104, 87
+  offset: 0, 0
+  index: -1
+LegLeft
+  rotate: true
+  xy: 409, 49
+  size: 29, 59
+  orig: 29, 59
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: false
+  xy: 497, 88
+  size: 8, 5
+  orig: 8, 5
+  offset: 0, 0
+  index: -1

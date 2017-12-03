@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="2017.07.25" orientation="orthogonal" renderorder="left-up" width="1" height="1" tilewidth="1500" tileheight="720" nextobjectid="15">
+ <tileset firstgid="1" name="Decoretions" tilewidth="455" tileheight="139" tilecount="5" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="3">
+   <image width="387" height="102" source="graphics/Dirt_01.png"/>
+  </tile>
+  <tile id="4">
+   <image width="408" height="135" source="graphics/Dirt_02.png"/>
+  </tile>
+  <tile id="5">
+   <image width="387" height="102" source="graphics/Dirt_03.png"/>
+  </tile>
+  <tile id="6">
+   <image width="455" height="139" source="graphics/DirtPurp_01.png"/>
+  </tile>
+  <tile id="7">
+   <image width="384" height="139" source="graphics/DirtPurp_02.png"/>
+  </tile>
+ </tileset>
+ <objectgroup name="Back"/>
+ <objectgroup name="Collision"/>
+ <objectgroup name="Front"/>
+</map>
