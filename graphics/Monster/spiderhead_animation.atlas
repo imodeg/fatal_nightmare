@@ -1,0 +1,111 @@
+
+spiderhead_animation.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+spider_blood1
+  rotate: false
+  xy: 890, 60
+  size: 18, 15
+  orig: 18, 15
+  offset: 0, 0
+  index: -1
+spider_blood3
+  rotate: false
+  xy: 972, 179
+  size: 40, 35
+  orig: 40, 35
+  offset: 0, 0
+  index: -1
+spider_blood_spray
+  rotate: false
+  xy: 810, 26
+  size: 79, 94
+  orig: 79, 94
+  offset: 0, 0
+  index: -1
+spider_body
+  rotate: false
+  xy: 0, 21
+  size: 224, 234
+  orig: 224, 234
+  offset: 0, 0
+  index: -1
+spider_body_damaged
+  rotate: false
+  xy: 225, 21
+  size: 224, 234
+  orig: 224, 234
+  offset: 0, 0
+  index: -1
+spider_eye3
+  rotate: false
+  xy: 890, 76
+  size: 39, 44
+  orig: 39, 44
+  offset: 0, 0
+  index: -1
+spider_eye4
+  rotate: false
+  xy: 450, 30
+  size: 44, 44
+  orig: 44, 44
+  offset: 0, 0
+  index: -1
+spider_eye_1
+  rotate: false
+  xy: 810, 0
+  size: 25, 25
+  orig: 25, 25
+  offset: 0, 0
+  index: -1
+spider_eye_2
+  rotate: false
+  xy: 495, 51
+  size: 19, 23
+  orig: 19, 23
+  offset: 0, 0
+  index: -1
+spider_leg4
+  rotate: false
+  xy: 840, 121
+  size: 131, 134
+  orig: 131, 134
+  offset: 0, 0
+  index: -1
+spider_leg_1
+  rotate: false
+  xy: 595, 85
+  size: 109, 170
+  orig: 109, 170
+  offset: 0, 0
+  index: -1
+spider_leg_2
+  rotate: false
+  xy: 450, 75
+  size: 144, 180
+  orig: 144, 180
+  offset: 0, 0
+  index: -1
+spider_leg_3
+  rotate: false
+  xy: 705, 121
+  size: 134, 134
+  orig: 134, 134
+  offset: 0, 0
+  index: -1
+spider_meat
+  rotate: true
+  xy: 972, 215
+  size: 40, 51
+  orig: 40, 51
+  offset: 0, 0
+  index: -1
+spider_mouth
+  rotate: true
+  xy: 705, 24
+  size: 96, 104
+  orig: 96, 104
+  offset: 0, 0
+  index: -1

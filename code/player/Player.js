@@ -1,13 +1,18 @@
 class Player extends Phaser.Sprite
 {
-  constructor(levelState, x, y)
+  constructor(levelState, x, y, armored = false)
   {
     super(game, x, y, '');
     this.levelState = levelState;
 
+    this.maxHealth = 100;
+    this.health = 100;
+
     this.cameraFollowObj = new Phaser.Image(game, 0, -110, '');
     this.addChild(this.cameraFollowObj);
     game.camera.follow(this.cameraFollowObj , Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
+    game.camera.x = this.x - (GameCfg.width/2);
+    game.camera.y = this.y - (GameCfg.height/2);
 
     game.physics.p2.enable(this, GameCfg.isDebug);
 
@@ -18,7 +23,7 @@ class Player extends Phaser.Sprite
     this.isOnGround = false;
     //this.body.setMaterial(this.levelState.physMaterials.floorContactMaterial, this.bottomContactShapeFix);
 
-    this.body.addRectangle(50, 100, 0, -70, 0); //main body shape
+    this.mainBodyShape = this.body.addRectangle(50, 100, 0, -70, 0); //main body shape
 
     //this.kickContactShape = this.body.addRectangle(20, 20, 0, -60, 0); //kick collide shape
     this.kickContactShape = this.body.addCircle(15, 0, -60, 0);
@@ -35,6 +40,11 @@ class Player extends Phaser.Sprite
     this.addChild(this.displayObject);
 
     this.isArmed = false;
+    if(armored)
+    {
+      this.isArmed = true;
+      this.displayObject.skeleton.setSkinByName('Katana');
+    }
     //this.displayObject.skeleton.setSkinByName('Katana');
 
     this.dirrection = 'right'; // or 'left'
@@ -64,6 +74,7 @@ class Player extends Phaser.Sprite
     this.playerState_Run = new PlayerStateRun(this);
     this.playerState_Jump = new PlayerStateJump(this);
     this.playerState_Fall = new PlayerStateFall(this);
+    this.playerState_Hit = new PlayerStateHit(this);
 
     this.playerState_KickWeapon_01 = new PlayerStateKickWeapon_01(this);
     this.playerState_KickWeapon_02 = new PlayerStateKickWeapon_02(this);
@@ -77,9 +88,33 @@ class Player extends Phaser.Sprite
     this.body.onEndContact.add(this.contactEnd, this);
   }
 
+
+
+  hit(damage, enemy)
+  {
+    game.camera.flash(0xBB0000, 500, true, 0.2);
+
+    this.health -= damage;
+    this.levelState.gui_HealthBar.setHealth(this.health);
+
+    this.setState(this.playerState_Hit);
+    if(enemy.x > this.x)
+    {
+      this.displayObject.scale.setTo(1, 1);
+      this.body.moveLeft(400);
+      this.body.moveUp(300);
+    }
+    else
+    {
+      this.displayObject.scale.setTo(-1, 1);
+      this.body.moveRight(400);
+      this.body.moveUp(300);
+    }
+  }
+
   contactEnd (body, bodyB, shapeA, shapeB)
   {
-    if(shapeA == this.bottomContactShape)
+    if(shapeA == this.bottomContactShape && shapeB.sensor == false)
     {
       this.onContactEndGround.dispatch(); //signal if contact floor
     }
@@ -87,31 +122,37 @@ class Player extends Phaser.Sprite
 
   contactStart (body, bodyB, shapeA, shapeB, equation)
   {
-    if(shapeA == this.bottomContactShape)
+    if(shapeA == this.bottomContactShape && shapeB.sensor == false)
     {
       this.onContactGround.dispatch(); //signal if contact floor
     }
 
-    if(shapeA == this.kickContactShape && bodyB.parent) //kick collision
+    if(shapeA == this.kickContactShape && bodyB.parent.entityType) //kick collision
     {
       //console.log(bodyB);
       switch (bodyB.parent.entityType)
       {
         case 'Enemy_Tumbler':
-          this.state.hitEntity(bodyB)
+          if (shapeB.sensor == false)
+          {this.state.hitEntity(bodyB)}
+        case 'Enemy_Spider':
+          if (shapeB.sensor == false)
+          {this.state.hitEntity(bodyB)}
         default:
-
           break;
       }
+    }
 
-      if(this.dirrection == 'right')
+    if(shapeA == this.mainBodyShape && shapeB.sensor == true) //kick collision
+    {
+      switch (bodyB.parent.entityType)
       {
-        //console.log(shapeB);
-        //bodyB.parent.applyImpulse([-150,0], 0, 0);
-      }
-      else
-      {
-        //bodyB.parent.applyImpulse([150,0], 0, 0);
+        case 'Enemy_Tumbler':
+
+        case 'Enemy_Spider':
+            this.hit(5, bodyB.parent.sprite);
+        default:
+          break;
       }
     }
     //console.log(body);

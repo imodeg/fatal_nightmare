@@ -516,7 +516,7 @@ class PlayerStateKickWeapon_02 extends PlayerStateBase
     //this.timer.removeAll();
     game.time.events.remove(this.timer);
     game.time.events.remove(this.timerKick);
-
+    game.time.events.remove(this.timerClearHitShape);
     this.clearHitShape();
   }
 }
@@ -596,5 +596,36 @@ class PlayerStateKickWeapon_03 extends PlayerStateBase
     game.time.events.remove(this.timerKick);
 
     this.clearHitShape();
+  }
+}
+
+class PlayerStateHit
+{
+  constructor(player)
+  {
+    this.player = player;
+    this.isMovable = false;
+    this.timer = null;
+  }
+
+  start()
+  {
+    this.player.displayObject.state.setAnimation(0, 'Hit', false);
+    //this.player.body.moveLeft(300);
+    this.timer = game.time.events.add(500,
+      () =>
+      {
+        this.player.setState(this.player.playerState_Idle);
+      }, this);
+  }
+
+  update()
+  {
+
+  }
+
+  clear()
+  {
+    game.time.events.remove(this.timer);
   }
 }

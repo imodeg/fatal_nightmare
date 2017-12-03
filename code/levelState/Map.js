@@ -171,6 +171,11 @@ class Map
         entitiesGroup.add(newEntity);
         break;
 
+      case 'Enemy_Spider':
+        newEntity = new Enemy_Spider(this.levelState, object.x, object.y);
+        entitiesGroup.add(newEntity);
+        break;
+
       case 'TriggerPlace_WinLevel01':
         //newEntity = new Enemy_Tumbler(this.levelState, object.x, object.y);
         //newEntity = new Phaser.Sprite(game, object.x, object.y, 'block');

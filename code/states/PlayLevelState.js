@@ -10,10 +10,10 @@ class PlayLevelState
     this.layerCollision;
 
     this.map;
-
     this.physMaterials;
-
     this.player;
+
+    this.gui_HealthBar;
   }
 
   preload()
@@ -27,6 +27,10 @@ class PlayLevelState
     //game.load.spine('player', 'CONTENT_SOURCES/PlayerTestExport/PlayerTest.json');
     game.load.spine('player', 'graphics/Player/Player.json');
 
+    game.load.image('healthBar_front', 'graphics/Gui/healthBar_front.png');
+    game.load.image('healthBar_flare', 'graphics/Gui/healthBar_flare.png');
+    game.load.image('healthBar_line', 'graphics/Gui/healthBar_line.png');
+
     game.load.spritesheet('blood_1', 'graphics/Elements/blood_1.png', 80, 80);
     game.load.image('catana_back', 'graphics/Elements/catana_back.png');
     game.load.image('catana_front', 'graphics/Elements/catana_front.png');
@@ -35,6 +39,8 @@ class PlayLevelState
     game.load.image('EnemyTumbler_Prt1', 'graphics/Monster/EnemyTumbler_Prt1.png');
     game.load.image('EnemyTumbler_Prt2', 'graphics/Monster/EnemyTumbler_Prt2.png');
     game.load.image('EnemyTumbler_Prt3', 'graphics/Monster/EnemyTumbler_Prt3.png');
+
+    game.load.spine('EnemySpider', 'graphics/Monster/spiderhead_animation.json');
 
     game.load.json('map', 'levels/Level_02.json');
 
@@ -47,10 +53,10 @@ class PlayLevelState
     game.load.image('graphics/Decor02.png', 'levels/graphics/Decor02.png');
     game.load.image('graphics/Decor03.png', 'levels/graphics/Decor03.png');
     game.load.image('graphics/Decor04.png', 'levels/graphics/Decor04.png');
+    game.load.image('graphics/Decor05.png', 'levels/graphics/Decor05.png');
 
     game.load.image('graphics/Rock_01.png', 'levels/graphics/Rock_01.png');
 
-    game.load.image('graphics/Decor05.png', 'levels/graphics/Decor05.png');
 
     game.load.image('block', 'graphics/block.png');
 
@@ -120,6 +126,7 @@ class PlayLevelState
 
   create()
   {
+    game.stage.disableVisibilityChange = true;
     game.physics.startSystem(Phaser.Physics.P2JS);
     this.physMaterials = new PhysMaterials();
     game.physics.p2.gravity.y = 1000;
@@ -140,12 +147,22 @@ class PlayLevelState
     this.layerFront_Parallax_03 = game.add.group();
     this.layerFront_Parallax_02 = game.add.group();
     this.layerFront_Parallax_01 = game.add.group();
+    this.guiGroup = game.add.group();
 
     let mapJSON = game.cache.getJSON('map');
     this.map = new Map(mapJSON, this);
     this.map.initLevel();
 
     this.layerEntities.swap(this.player, this.layerEntities.children[this.layerEntities.children.length-1]); //make player front
+
+
+    //gui
+    this.gui_HealthBar = new HealthBar(this, 20, 20);
+    this.guiGroup.add(this.gui_HealthBar);
+
+    this.fade = game.add.graphics(0, 0);
+    this.fade.fixedToCamera = true;
+    this.fadeOut();
     /*
     var box = game.add.sprite(1000, 200, 'block');
     game.physics.p2.enable(box);
@@ -154,17 +171,28 @@ class PlayLevelState
     */
     //temp add to editor
     //BackCloud_01
-    let delay = 0;
-    for (var i = 0; i < 50; i++)
-    {
-        //game.add.sprite(game.world.randomX, game.world.randomY, 'BackCloud_01');
-        let cloudNum = game.rnd.integerInRange(1, 3);
-        let imgKey = 'BackCloud_0' + cloudNum;
-        let cloudObj = this.layerBackground.create(-800, game.world.randomY/3, imgKey);
+    //let delay = 0;
+    //for (var i = 0; i < 50; i++)
+    //{
+    //    //game.add.sprite(game.world.randomX, game.world.randomY, 'BackCloud_01');
+    //    let cloudNum = game.rnd.integerInRange(1, 3);
+    //    let imgKey = 'BackCloud_0' + cloudNum;
+    //    let cloudObj = this.layerBackground.create(-800, game.world.randomY/3, imgKey);
 
-        game.add.tween(cloudObj).to({ x: 1900 }, 50000, Phaser.Easing.Linear.InOut, true, delay, 1000, false);
-        delay += 20000;
-    }
+    //    game.add.tween(cloudObj).to({ x: 1900 }, 50000, Phaser.Easing.Linear.InOut, true, delay, 1000, false);
+    //    delay += 20000;
+    //}
+  }
+
+  fadeOut()
+  {
+    this.fade.clear();
+    this.fade.beginFill(0x000000, 1);
+    //graphics.drawCircle(470, 200, 200);
+    this.fade.drawRect(0, 0, GameCfg.width, GameCfg.height);
+    this.fade.endFill();
+    let tween = game.add.tween(this.fade).to( { alpha: 0 }, 1000, Phaser.Easing.Linear.Out, true);
+    tween.start();
   }
 
   update()
