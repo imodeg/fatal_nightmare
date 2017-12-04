@@ -14,10 +14,11 @@ class Map
     game.world.setBounds(0, 0, this.mapJSON.tilewidth, this.mapJSON.tileheight);
     this.initImagesName();
 
-    this.loadStaticColorGeometry('BackColor', this.levelState.layerBackground);
+    this.loadStaticColorGeometry('BackColor', this.levelState.layerBack);
     this.loadParallaxImages('Back_Parallax_03', this.levelState.layerBack_Parallax_03);
     this.loadParallaxImages('Back_Parallax_02', this.levelState.layerBack_Parallax_02);
     this.loadParallaxImages('Back_Parallax_01', this.levelState.layerBack_Parallax_01);
+    this.loadStaticImages('Back_04', this.levelState.layerBack);
     this.loadStaticImages('Back_03', this.levelState.layerBack);
     this.loadStaticImages('Back_02', this.levelState.layerBack);
     this.loadStaticImages('Back_01', this.levelState.layerBack);
@@ -161,7 +162,12 @@ class Map
     switch (object.type)
     {
       case 'Player':
-        newEntity = new Player(this.levelState, object.x, object.y);
+        let armored = false;
+        if(object.properties)
+        {
+          armored = object.properties.armored;
+        }
+        newEntity = new Player(this.levelState, object.x, object.y, armored);
         this.levelState.player = newEntity;
         entitiesGroup.add(newEntity);
         break;
@@ -176,10 +182,15 @@ class Map
         entitiesGroup.add(newEntity);
         break;
 
-      case 'TriggerPlace_WinLevel01':
+      case 'Enemy_Flyer':
+        newEntity = new Enemy_Flyer(this.levelState, object.x, object.y);
+        entitiesGroup.add(newEntity);
+        break;
+        
+      case 'TriggerPlace_Win':
         //newEntity = new Enemy_Tumbler(this.levelState, object.x, object.y);
         //newEntity = new Phaser.Sprite(game, object.x, object.y, 'block');
-        newEntity = new TriggerPlace_WinLevel01(this.levelState, object.x, object.y);
+        newEntity = new TriggerPlace_Win(this.levelState, object.x, object.y, object.name);
         newEntity.width = object.width;
         newEntity.height = object.height;
 
@@ -189,6 +200,22 @@ class Map
       case 'Weapon_Katana':
         newEntity = new Weapon_Katana(this.levelState, object.x, object.y);
         entitiesGroup.add(newEntity);
+        break;
+
+      case 'ItemObject':
+        let create = true;
+        for(let i = 0; i < GameCfg.itemsArray.length; i++)
+        {
+          if(GameCfg.itemsArray[i] == object.name)
+          {
+            create = false;
+          }
+        }
+        if(create)
+        {
+          newEntity = new ItemObject(this.levelState, object.x, object.y, object.name);
+          entitiesGroup.add(newEntity);
+        }
         break;
 
       default:

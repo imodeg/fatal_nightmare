@@ -1,0 +1,83 @@
+
+goblinsmall.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+letun_blood1
+  rotate: false
+  xy: 407, 167
+  size: 22, 24
+  orig: 22, 24
+  offset: 0, 0
+  index: -1
+letun_blood3
+  rotate: false
+  xy: 382, 192
+  size: 65, 54
+  orig: 65, 54
+  offset: 0, 0
+  index: -1
+letun_glaz
+  rotate: false
+  xy: 448, 200
+  size: 50, 46
+  orig: 50, 46
+  offset: 0, 0
+  index: -1
+letun_kleshnia1
+  rotate: false
+  xy: 350, 58
+  size: 34, 77
+  orig: 34, 77
+  offset: 0, 0
+  index: -1
+letun_kleshnia2
+  rotate: false
+  xy: 312, 59
+  size: 37, 76
+  orig: 37, 76
+  offset: 0, 0
+  index: -1
+letun_telo
+  rotate: false
+  xy: 0, 3
+  size: 155, 135
+  orig: 155, 135
+  offset: 0, 0
+  index: -1
+letun_telo_damaged
+  rotate: false
+  xy: 156, 0
+  size: 155, 135
+  orig: 155, 135
+  offset: 0, 0
+  index: -1
+letun_wing1
+  rotate: false
+  xy: 212, 136
+  size: 169, 110
+  orig: 169, 110
+  offset: 0, 0
+  index: -1
+letun_wing_2
+  rotate: false
+  xy: 0, 139
+  size: 211, 107
+  orig: 211, 107
+  offset: 0, 0
+  index: -1
+letun_zub1
+  rotate: false
+  xy: 312, 29
+  size: 18, 29
+  orig: 18, 29
+  offset: 0, 0
+  index: -1
+letun_zub2
+  rotate: false
+  xy: 382, 157
+  size: 24, 34
+  orig: 24, 34
+  offset: 0, 0
+  index: -1

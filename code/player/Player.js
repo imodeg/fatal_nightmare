@@ -7,6 +7,7 @@ class Player extends Phaser.Sprite
 
     this.maxHealth = 100;
     this.health = 100;
+    this.alive = true;
 
     this.cameraFollowObj = new Phaser.Image(game, 0, -110, '');
     this.addChild(this.cameraFollowObj);
@@ -45,7 +46,6 @@ class Player extends Phaser.Sprite
       this.isArmed = true;
       this.displayObject.skeleton.setSkinByName('Katana');
     }
-    //this.displayObject.skeleton.setSkinByName('Katana');
 
     this.dirrection = 'right'; // or 'left'
 
@@ -75,6 +75,7 @@ class Player extends Phaser.Sprite
     this.playerState_Jump = new PlayerStateJump(this);
     this.playerState_Fall = new PlayerStateFall(this);
     this.playerState_Hit = new PlayerStateHit(this);
+    this.playerState_Death = new PlayerStateDeath(this);
 
     this.playerState_KickWeapon_01 = new PlayerStateKickWeapon_01(this);
     this.playerState_KickWeapon_02 = new PlayerStateKickWeapon_02(this);
@@ -90,25 +91,34 @@ class Player extends Phaser.Sprite
 
 
 
-  hit(damage, enemy)
+  hit(damage, position)
   {
-    game.camera.flash(0xBB0000, 500, true, 0.2);
-
-    this.health -= damage;
-    this.levelState.gui_HealthBar.setHealth(this.health);
-
-    this.setState(this.playerState_Hit);
-    if(enemy.x > this.x)
+    if(this.alive)
     {
-      this.displayObject.scale.setTo(1, 1);
-      this.body.moveLeft(400);
-      this.body.moveUp(300);
-    }
-    else
-    {
-      this.displayObject.scale.setTo(-1, 1);
-      this.body.moveRight(400);
-      this.body.moveUp(300);
+      game.camera.flash(0xBB0000, 500, true, 0.2);
+
+      this.health -= damage;
+      this.levelState.gui_HealthBar.setHealth(this.health);
+
+      this.setState(this.playerState_Hit);
+      if(position.x > this.x)
+      {
+        this.displayObject.scale.setTo(1, 1);
+        this.body.moveLeft(400);
+        this.body.moveUp(300);
+      }
+      else
+      {
+        this.displayObject.scale.setTo(-1, 1);
+        this.body.moveRight(400);
+        this.body.moveUp(300);
+      }
+
+      if(this.health <= 0)
+      {
+        this.alive = false;
+        this.setState(this.playerState_Death);
+      }
     }
   }
 
@@ -134,30 +144,43 @@ class Player extends Phaser.Sprite
       {
         case 'Enemy_Tumbler':
           if (shapeB.sensor == false)
-          {this.state.hitEntity(bodyB)}
+          {this.state.hitEntity(bodyB);}
+          break;
         case 'Enemy_Spider':
           if (shapeB.sensor == false)
-          {this.state.hitEntity(bodyB)}
+          {this.state.hitEntity(bodyB);}
+          break;
+        case 'Enemy_Flyer':
+          if (shapeB.sensor == false)
+          {this.state.hitEntity(bodyB);}
+          break;
+        case 'Enemy_Flyer_Bullet':
+          if (shapeB.sensor == true)
+          {bodyB.parent.sprite.destroyBullet();}
+          break;
         default:
           break;
       }
     }
 
-    if(shapeA == this.mainBodyShape && shapeB.sensor == true) //kick collision
+    if(shapeA == this.mainBodyShape && shapeB.sensor == true && bodyB.parent.entityType) //kick collision
     {
       switch (bodyB.parent.entityType)
       {
         case 'Enemy_Tumbler':
 
+            break;
         case 'Enemy_Spider':
-            this.hit(5, bodyB.parent.sprite);
+            this.hit(15, bodyB.parent.sprite.position);
+            break;
+        case 'Enemy_Flyer_Bullet':
+            this.hit(7, bodyB.parent.sprite.position);
+            bodyB.parent.sprite.destroyBullet();
+            break;
         default:
           break;
       }
     }
-    //console.log(body);
-    //console.log(bodyB);
-    //console.log(equation);
   }
 
   setState(state)
@@ -226,7 +249,14 @@ class Player extends Phaser.Sprite
   {
     game.input.gamepad.start();
     let pad = game.input.gamepad.pad1;
-    pad.addCallbacks(this, { onConnect: this.initGamepad });
+    if(game.input.gamepad.pad1.connected)
+    {
+      this.initGamepad();
+    }
+    else
+    {
+      pad.addCallbacks(this, { onConnect: this.initGamepad });
+    }
 
     game.input.keyboard.addKeyCapture(Phaser.Keyboard.SPACEBAR);
     game.input.keyboard.addKeyCapture
@@ -280,7 +310,11 @@ class Player extends Phaser.Sprite
 
   initGamepad()
   {
+    //game.input.gamepad.reset();
+    //game.input.gamepad.start();
     let pad = game.input.gamepad.pad1;
+    console.log('game.input.gamepad.pad1');
+    console.log(game.input.gamepad.pad1);
 
     let keyPad_moveLeft = pad.getButton(Phaser.Gamepad.XBOX360_DPAD_LEFT);
     keyPad_moveLeft.onDown.add(
@@ -317,5 +351,21 @@ class Player extends Phaser.Sprite
     let keyPad_kick = pad.getButton(Phaser.Gamepad.XBOX360_X);
     keyPad_kick.onDown.add(()=>{ this.onPressKick.dispatch(); });
     keyPad_kick.onUp.add(()=>{ this.onReleaseKick.dispatch(); });
+  }
+
+  stopPlayer()
+  {
+    this.setState(this.playerState_Empty);
+    this.playerState_Empty = null;
+    this.playerState_Idle = null;
+    this.playerState_Run = null;
+    this.playerState_Jump = null;
+    this.playerState_Fall = null;
+    this.playerState_Hit = null;
+    this.playerState_Death = null;
+
+    this.playerState_KickWeapon_01 = null;
+    this.playerState_KickWeapon_02 = null;
+    this.playerState_KickWeapon_03 = null;
   }
 }

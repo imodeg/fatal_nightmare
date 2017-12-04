@@ -177,6 +177,7 @@ class Enemy_SpiderStateKick extends Enemy_SpiderStateBase
 
   clear()
   {
+    this.clearHitShape();
     game.time.events.remove(this.timer);
     game.time.events.remove(this.timerClearHitShape);
     game.time.events.remove(this.timerSetHitShape);
@@ -218,12 +219,17 @@ class Enemy_SpiderStateDeath extends Enemy_SpiderStateBase
   constructor(monster)
   {
     super(monster);
+    this.timer = null;
   }
 
   start()
   {
     this.monster.displayObject.state.setAnimation(0, 'death', false);
-    this.deathShapeApply();
+    this.timer = game.time.events.add(200,
+      () =>
+      {
+        this.deathShapeApply();
+      });
 
   }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="2017.07.25" orientation="orthogonal" renderorder="right-down" width="1" height="1" tilewidth="3560" tileheight="5000" nextobjectid="254">
- <tileset firstgid="1" name="Decoretions" tilewidth="1026" tileheight="572" tilecount="95" columns="0">
+<map version="1.0" tiledversion="2017.07.25" orientation="orthogonal" renderorder="right-down" width="1" height="1" tilewidth="3560" tileheight="5000" nextobjectid="284">
+ <tileset firstgid="1" name="Decoretions" tilewidth="1026" tileheight="726" tilecount="97" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="3">
    <image width="387" height="102" source="graphics/Dirt_01.png"/>
@@ -287,8 +287,14 @@
   <tile id="97">
    <image width="167" height="323" source="graphics/Tree11.png"/>
   </tile>
+  <tile id="98">
+   <image width="754" height="726" source="graphics/treeBig.png"/>
+  </tile>
+  <tile id="99">
+   <image width="369" height="158" source="graphics/BadShadow.png"/>
+  </tile>
  </tileset>
- <tileset firstgid="99" name="Decoretions" tilewidth="1026" tileheight="508" tilecount="72" columns="0">
+ <tileset firstgid="101" name="Decoretions" tilewidth="1026" tileheight="508" tilecount="72" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="3">
    <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Dirt_01.png"/>
@@ -520,13 +526,21 @@
  </objectgroup>
  <objectgroup name="Back_Parallax_03" locked="1">
   <properties>
-   <property name="speed" type="float" value="0.8"/>
+   <property name="speed" type="float" value="8"/>
   </properties>
+  <object id="271" gid="49" x="223.303" y="1963.05" width="838.727" height="188.195"/>
+  <object id="279" gid="48" x="-1201" y="1406" width="747" height="141"/>
+  <object id="280" gid="48" x="535" y="998" width="747" height="141"/>
+  <object id="281" gid="48" x="-701" y="342" width="747" height="141"/>
+  <object id="282" gid="48" x="-1749" y="-150" width="747" height="141"/>
  </objectgroup>
  <objectgroup name="Back_Parallax_02" locked="1">
   <properties>
-   <property name="speed" type="float" value="0.8"/>
+   <property name="speed" type="float" value="4"/>
   </properties>
+  <object id="259" gid="99" x="926.03" y="1287.24" width="754" height="726"/>
+  <object id="277" gid="49" x="466.212" y="2480.7" width="566" height="127"/>
+  <object id="278" gid="49" x="1705.24" y="2247.36" width="566" height="127"/>
  </objectgroup>
  <objectgroup name="Back_Parallax_01" locked="1">
   <properties>
@@ -539,6 +553,7 @@
   </object>
   <object id="252" gid="75" x="1248" y="4185.12" width="561" height="282.235"/>
  </objectgroup>
+ <objectgroup name="Back_04" locked="1"/>
  <objectgroup name="Back_03" locked="1">
   <object id="142" gid="21" x="2288.06" y="3440.91" width="260.242" height="213.121"/>
   <object id="144" gid="11" x="2541.85" y="1874.39" width="86" height="270"/>
@@ -605,6 +620,7 @@
   <object id="148" gid="44" x="914.39" y="2222.49" width="268" height="123.636" rotation="9.86571"/>
   <object id="155" gid="40" x="1146.12" y="2973.79" width="533" height="190"/>
   <object id="162" gid="44" x="1002.36" y="2892.12" width="268" height="160"/>
+  <object id="260" gid="37" x="2828.33" y="2051.57" width="487" height="246" rotation="-17.2195"/>
  </objectgroup>
  <objectgroup name="Back_01" locked="1">
   <object id="157" gid="54" x="2030.88" y="4469.24" width="99.8485" height="65.7576"/>
@@ -616,6 +632,7 @@
   <object id="185" gid="54" x="1236.94" y="2857.12" width="115" height="90"/>
   <object id="186" gid="54" x="1567.24" y="1869.24" width="115" height="90"/>
   <object id="187" gid="56" x="2138.82" y="3099.61" width="86" height="79"/>
+  <object id="262" gid="26" x="2814.33" y="1931.67" width="407" height="388"/>
  </objectgroup>
  <objectgroup name="Front_03" locked="1">
   <object id="241" gid="55" x="695" y="4522" width="124" height="75"/>
@@ -632,6 +649,7 @@
   <properties>
    <property name="speed" type="float" value="-0.7"/>
   </properties>
+  <object id="264" gid="27" x="3011.33" y="1962.33" width="367" height="164"/>
  </objectgroup>
  <objectgroup name="Front_Parallax_02" locked="1">
   <properties>
@@ -644,9 +662,11 @@
   </properties>
  </objectgroup>
  <objectgroup name="Entity">
-  <object id="88" type="Player" x="3067.17" y="4392.17"/>
-  <object id="209" type="Weapon_Katana" x="2628.83" y="4489"/>
-  <object id="253" type="Enemy_Spider" x="1366" y="4428"/>
+  <object id="88" type="Player" x="2926.05" y="4456.08"/>
+  <object id="209" type="Weapon_Katana" x="1460.83" y="3773.5"/>
+  <object id="256" name="item_1" type="ItemObject" x="1704.67" y="2110.33"/>
+  <object id="267" name="item_2" type="ItemObject" x="1620.67" y="4525.66"/>
+  <object id="268" name="LevelFinalState" type="TriggerPlace_Win" x="2982" y="1324" width="212" height="398.667"/>
  </objectgroup>
  <objectgroup name="Collision" locked="1">
   <object id="196" x="2917" y="4485.5">
@@ -738,6 +758,15 @@
   </object>
   <object id="240" x="2569.33" y="1835.33">
    <polygon points="0,0 234,-19.3333 308,66.6667 311.333,102 211.333,153.333 -1.33333,203.333"/>
+  </object>
+  <object id="265" x="2799.33" y="1821.33">
+   <polygon points="0,0 220.667,-27.3333 434,8 448.667,60.6667 228.667,100.667 30,89.3333"/>
+  </object>
+  <object id="266" x="2901.33" y="1818">
+   <polygon points="0,0 0.666667,-80 240.667,-84 250.667,1.33333"/>
+  </object>
+  <object id="269" x="3161" y="1806">
+   <polygon points="0,0 -3,-434 142,-437 115,19"/>
   </object>
  </objectgroup>
 </map>

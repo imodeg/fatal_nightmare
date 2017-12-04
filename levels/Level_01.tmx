@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="2017.07.25" orientation="orthogonal" renderorder="right-down" width="1" height="1" tilewidth="1700" tileheight="640" nextobjectid="89">
- <tileset firstgid="1" name="Decoretions" tilewidth="1026" tileheight="508" tilecount="72" columns="0">
+<map version="1.0" tiledversion="2017.07.25" orientation="orthogonal" renderorder="right-down" width="1" height="1" tilewidth="1700" tileheight="640" nextobjectid="94">
+ <tileset firstgid="1" name="Decoretions" tilewidth="1026" tileheight="486" tilecount="73" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="3">
    <image width="387" height="102" source="graphics/Dirt_01.png"/>
@@ -218,6 +218,9 @@
   <tile id="74">
    <image width="485" height="244" source="graphics/r_16.png"/>
   </tile>
+  <tile id="75">
+   <image width="369" height="158" source="graphics/BadShadow.png"/>
+  </tile>
  </tileset>
  <objectgroup color="#000000" name="BackColor" locked="1">
   <object id="47" x="-73.1149" y="456">
@@ -254,15 +257,17 @@
    <property name="speed" type="int" value="1"/>
   </properties>
  </objectgroup>
+ <objectgroup name="Back_04" locked="1"/>
  <objectgroup name="Back_03" locked="1"/>
  <objectgroup name="Back_02" locked="1">
   <object id="63" gid="31" x="906" y="662" width="561" height="486"/>
-  <object id="65" gid="28" x="145" y="540.333" width="251" height="443"/>
+  <object id="65" gid="28" x="104" y="539.333" width="251" height="443"/>
+  <object id="91" gid="76" x="1003" y="594" width="360" height="147"/>
  </objectgroup>
  <objectgroup name="Back_01" locked="1">
   <object id="54" gid="26" x="975" y="630" width="407" height="388"/>
   <object id="55" gid="29" x="1393" y="537" width="296" height="261"/>
-  <object id="56" gid="32" x="671.667" y="458.588" width="206" height="307.177"/>
+  <object id="56" gid="32" x="715.667" y="460.588" width="206" height="307.177"/>
   <object id="86" gid="34" x="361.667" y="546.667" width="251" height="281"/>
   <object id="87" gid="33" x="298" y="632.667" width="668" height="141"/>
  </objectgroup>
@@ -283,12 +288,12 @@
  </objectgroup>
  <objectgroup name="Front_Parallax_01" locked="1">
   <properties>
-   <property name="speed" type="int" value="1"/>
+   <property name="speed" type="int" value="-10"/>
   </properties>
  </objectgroup>
  <objectgroup name="Entity">
-  <object id="37" type="Player" x="131.75" y="259.333"/>
-  <object id="74" type="TriggerPlace_WinLevel01" x="1082.67" y="14.6667" width="212" height="398.667"/>
+  <object id="37" type="Player" x="127.75" y="498.333"/>
+  <object id="74" name="Level02State" type="TriggerPlace_Win" x="1138" y="14.6667" width="212" height="398.667"/>
  </objectgroup>
  <objectgroup name="Collision" locked="1">
   <object id="53" x="-44.2258" y="515.394">
@@ -296,6 +301,9 @@
   </object>
   <object id="70" x="1046" y="524">
    <polygon points="0,0 4,-91 273,-95 278,-1"/>
+  </object>
+  <object id="93" x="1330" y="60">
+   <polygon points="0,0 236,-2 239,470 8,467"/>
   </object>
  </objectgroup>
 </map>

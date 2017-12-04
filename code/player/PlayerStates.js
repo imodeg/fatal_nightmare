@@ -502,7 +502,8 @@ class PlayerStateKickWeapon_02 extends PlayerStateBase
       () =>
       {
         entity.hit(2);
-        entityBody.parent.applyImpulse([0,600], 0, 0);
+        entityBody.parent.moveUp(600);
+        //entityBody.parent.applyImpulse([0,600], 0, 0);
       }, this);
   }
 
@@ -580,7 +581,8 @@ class PlayerStateKickWeapon_03 extends PlayerStateBase
       () =>
       {
         entity.hit(2);
-        entityBody.parent.applyImpulse([0,-800], 0, 0);
+        entityBody.parent.moveDown(800);
+        //entityBody.parent.applyImpulse([0,-800], 0, 0);
       }, this);
   }
 
@@ -616,6 +618,38 @@ class PlayerStateHit
       () =>
       {
         this.player.setState(this.player.playerState_Idle);
+      }, this);
+  }
+
+  update()
+  {
+
+  }
+
+  clear()
+  {
+    game.time.events.remove(this.timer);
+  }
+}
+
+class PlayerStateDeath
+{
+  constructor(player)
+  {
+    this.player = player;
+    this.isMovable = false;
+    this.timer = null;
+  }
+
+  start()
+  {
+    this.player.displayObject.state.setAnimation(0, 'Death', false);
+    game.camera.fade(0x000000, 2000, true);
+    //this.player.body.moveLeft(300);
+    this.timer = game.time.events.add(2000,
+      () =>
+      {
+        game.state.start(game.state.current);
       }, this);
   }
 

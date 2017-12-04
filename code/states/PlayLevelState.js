@@ -30,10 +30,19 @@ class PlayLevelState
     game.load.image('healthBar_front', 'graphics/Gui/healthBar_front.png');
     game.load.image('healthBar_flare', 'graphics/Gui/healthBar_flare.png');
     game.load.image('healthBar_line', 'graphics/Gui/healthBar_line.png');
+    game.load.image('item_cell', 'graphics/Gui/item_cell.png');
 
     game.load.spritesheet('blood_1', 'graphics/Elements/blood_1.png', 80, 80);
     game.load.image('catana_back', 'graphics/Elements/catana_back.png');
     game.load.image('catana_front', 'graphics/Elements/catana_front.png');
+
+    game.load.image('item_1', 'graphics/Elements/item_dimond.png');
+    game.load.image('item_2', 'graphics/Elements/item_money.png');
+    game.load.image('item_3', 'graphics/Elements/item_perfume.png');
+    game.load.image('item_4', 'graphics/Elements/item_ring.png');
+    game.load.image('item_5', 'graphics/Elements/item_shoes.png');
+    game.load.image('item_6', 'graphics/Elements/item_shoes_2.png');
+    game.load.image('star', 'graphics/Elements/star.png');
 
     game.load.image('EnemyTumbler', 'graphics/Monster/EnemyTumbler.png');
     game.load.image('EnemyTumbler_Prt1', 'graphics/Monster/EnemyTumbler_Prt1.png');
@@ -42,7 +51,7 @@ class PlayLevelState
 
     game.load.spine('EnemySpider', 'graphics/Monster/spiderhead_animation.json');
 
-    game.load.json('map', 'levels/Level_02.json');
+    game.load.json('map', 'levels/Level_final.json');
 
     game.load.image('graphics/Dirt_01.png', 'levels/graphics/Dirt_01.png');
     game.load.image('graphics/Dirt_02.png', 'levels/graphics/Dirt_02.png');
@@ -56,7 +65,16 @@ class PlayLevelState
     game.load.image('graphics/Decor05.png', 'levels/graphics/Decor05.png');
 
     game.load.image('graphics/Rock_01.png', 'levels/graphics/Rock_01.png');
+    game.load.image('graphics/Rock_02.png', 'levels/graphics/Rock_02.png');
+    game.load.image('graphics/Rock_03.png', 'levels/graphics/Rock_03.png');
+    game.load.image('graphics/Rock_04.png', 'levels/graphics/Rock_04.png');
 
+    game.load.image('graphics/rock_05.png', 'levels/graphics/rock_05.png');
+    game.load.image('graphics/rock_06.png', 'levels/graphics/rock_06.png');
+    game.load.image('graphics/rock_07.png', 'levels/graphics/rock_07.png');
+    game.load.image('graphics/rock_08.png', 'levels/graphics/rock_08.png');
+    game.load.image('graphics/rock_09.png', 'levels/graphics/rock_09.png');
+    game.load.image('graphics/rock_10.png', 'levels/graphics/rock_10.png');
 
     game.load.image('block', 'graphics/block.png');
 
@@ -122,6 +140,47 @@ class PlayLevelState
     game.load.image('graphics/Tree01.png', 'levels/graphics/Tree01.png');
     game.load.image('graphics/Tree02.png', 'levels/graphics/Tree02.png');
     game.load.image('graphics/Tree03.png', 'levels/graphics/Tree03.png');
+    game.load.image('graphics/Tree04.png', 'levels/graphics/Tree04.png');
+    game.load.image('graphics/Tree05.png', 'levels/graphics/Tree05.png');
+    game.load.image('graphics/Tree06.png', 'levels/graphics/Tree06.png');
+    game.load.image('graphics/Tree07.png', 'levels/graphics/Tree07.png');
+    game.load.image('graphics/Tree08.png', 'levels/graphics/Tree08.png');
+    game.load.image('graphics/Tree09.png', 'levels/graphics/Tree09.png');
+    game.load.image('graphics/Tree10.png', 'levels/graphics/Tree10.png');
+    game.load.image('graphics/Tree11.png', 'levels/graphics/Tree11.png');
+    game.load.image('graphics/tree12.png', 'levels/graphics/tree12.png');
+
+    game.load.image('graphics/tree14.png', 'levels/graphics/tree14.png');
+    game.load.image('graphics/tree15.png', 'levels/graphics/tree15.png');
+    game.load.image('graphics/tree16.png', 'levels/graphics/tree16.png');
+    game.load.image('graphics/tree17.png', 'levels/graphics/tree17.png');
+    game.load.image('graphics/treeBig.png', 'levels/graphics/treeBig.png');
+
+    game.load.image('graphics/Gress_01.png', 'levels/graphics/Gress_01.png');
+    game.load.image('graphics/Gress_02.png', 'levels/graphics/Gress_02.png');
+    game.load.image('graphics/Gress_03.png', 'levels/graphics/Gress_03.png');
+    game.load.image('graphics/Gress_04.png', 'levels/graphics/Gress_04.png');
+    game.load.image('graphics/Gress_05.png', 'levels/graphics/Gress_05.png');
+    game.load.image('graphics/Gress_06.png', 'levels/graphics/Gress_06.png');
+    game.load.image('graphics/Gress_07.png', 'levels/graphics/Gress_07.png');
+    game.load.image('graphics/eyes.png', 'levels/graphics/eyes.png');
+
+    game.load.image('graphics/darkblock_01.png', 'levels/graphics/darkblock_01.png');
+    game.load.image('graphics/darkblock_02.png', 'levels/graphics/darkblock_02.png');
+    game.load.image('graphics/darkblock_03.png', 'levels/graphics/darkblock_03.png');
+    game.load.image('graphics/darkblock_04.png', 'levels/graphics/darkblock_04.png');
+    game.load.image('graphics/darkblock_05.png', 'levels/graphics/darkblock_05.png');
+    game.load.image('graphics/darkblock_06.png', 'levels/graphics/darkblock_06.png');
+    game.load.image('graphics/darkblock_07.png', 'levels/graphics/darkblock_07.png');
+    game.load.image('graphics/darkblock_08.png', 'levels/graphics/darkblock_08.png');
+    game.load.image('graphics/darkblock_09.png', 'levels/graphics/darkblock_09.png');
+    game.load.image('graphics/darkblock_10.png', 'levels/graphics/darkblock_10.png');
+    game.load.image('graphics/darkblock_11.png', 'levels/graphics/darkblock_11.png');
+
+    game.load.image('graphics/ground1.png', 'levels/graphics/ground1.png');
+    game.load.image('graphics/ground2.png', 'levels/graphics/ground2.png');
+    game.load.image('graphics/ground3.png', 'levels/graphics/ground3.png');
+
   }
 
   create()
@@ -159,6 +218,9 @@ class PlayLevelState
     //gui
     this.gui_HealthBar = new HealthBar(this, 20, 20);
     this.guiGroup.add(this.gui_HealthBar);
+
+    this.gui_ItemsBar = new ItemsBar(this, GameCfg.width-30, 30);
+    this.guiGroup.add(this.gui_ItemsBar);
 
     this.fade = game.add.graphics(0, 0);
     this.fade.fixedToCamera = true;

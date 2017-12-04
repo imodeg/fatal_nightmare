@@ -175,6 +175,16 @@
         }, 
         {
          "draworder":"topdown",
+         "name":"Back_04",
+         "objects":[],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
          "name":"Back_03",
          "objects":[],
          "opacity":1,
@@ -208,8 +218,20 @@
                  "type":"",
                  "visible":true,
                  "width":251,
-                 "x":145,
-                 "y":540.333
+                 "x":104,
+                 "y":539.333
+                }, 
+                {
+                 "gid":76,
+                 "height":147,
+                 "id":91,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":360,
+                 "x":1003,
+                 "y":594
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -254,8 +276,8 @@
                  "type":"",
                  "visible":true,
                  "width":206,
-                 "x":671.667,
-                 "y":458.588
+                 "x":715.667,
+                 "y":460.588
                 }, 
                 {
                  "gid":34,
@@ -384,7 +406,7 @@
          "opacity":1,
          "properties":
             {
-             "speed":1
+             "speed":-10
             },
          "propertytypes":
             {
@@ -407,18 +429,18 @@
                  "type":"Player",
                  "visible":true,
                  "width":0,
-                 "x":131.75,
-                 "y":259.333
+                 "x":127.75,
+                 "y":498.333
                 }, 
                 {
                  "height":398.667,
                  "id":74,
-                 "name":"",
+                 "name":"Level02State",
                  "rotation":0,
-                 "type":"TriggerPlace_WinLevel01",
+                 "type":"TriggerPlace_Win",
                  "visible":true,
                  "width":212,
-                 "x":1082.67,
+                 "x":1138.00333333333,
                  "y":14.6667
                 }],
          "opacity":1,
@@ -486,6 +508,34 @@
                  "width":0,
                  "x":1046,
                  "y":524
+                }, 
+                {
+                 "height":0,
+                 "id":93,
+                 "name":"",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":236,
+                         "y":-2
+                        }, 
+                        {
+                         "x":239,
+                         "y":470
+                        }, 
+                        {
+                         "x":8,
+                         "y":467
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":1330,
+                 "y":60
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -493,7 +543,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":89,
+ "nextobjectid":94,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"2017.07.25",
@@ -511,8 +561,8 @@
          "margin":0,
          "name":"Decoretions",
          "spacing":0,
-         "tilecount":72,
-         "tileheight":508,
+         "tilecount":73,
+         "tileheight":486,
          "tiles":
             {
              "10":
@@ -934,6 +984,12 @@
                  "image":"graphics\/r_16.png",
                  "imageheight":244,
                  "imagewidth":485
+                },
+             "75":
+                {
+                 "image":"graphics\/BadShadow.png",
+                 "imageheight":158,
+                 "imagewidth":369
                 },
              "8":
                 {
