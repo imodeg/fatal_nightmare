@@ -139,60 +139,60 @@ class TriggerPlace_Finale extends Phaser.Sprite
     let tween = game.add.tween(this.levelState.player.cameraFollowObj).to( { x: 300, y: -200 }, 300, Phaser.Easing.Sinusoidal.Out, true, 0);
 
     this.levelState.visualText.setNewText('Oh ki tty! i  will get you outa here!', 500);
-    this.levelState.visualText.vanishText(2500, 1000);
+    this.levelState.visualText.vanishText(3500, 1000);
 
-    game.time.events.add(3500,
+    game.time.events.add(4500,
       () =>
       {
         this.levelState.visualText.cameraOffset.x += 380;
       }, this);
 
-    this.levelState.visualText.setNewText('Why you get all thi s stuff? Meou?', 4000, true);
-    this.levelState.visualText.vanishText(6000, 1000);
+    this.levelState.visualText.setNewText('Why you get all thi s stuff? Meou?', 5000, true);
+    this.levelState.visualText.vanishText(7000, 1000);
 
 
-    game.time.events.add(6500,
+    game.time.events.add(7500,
       () =>
       {
         this.levelState.boss.displayObject.state.setAnimation(0, 'kitten_mutation', false);
       }, this);
 
-    this.levelState.visualText.setNewText('get your stuff i f you need i t!', 8000, true);
-    this.levelState.visualText.vanishText(9500, 1000);
+    this.levelState.visualText.setNewText('get your stuff i f you need i t!', 9000, true);
+    this.levelState.visualText.vanishText(11500, 1000);
 
-    game.time.events.add(8500,
+    game.time.events.add(10500,
       () =>
       {
         this.levelState.gui_ItemsBar.hitPlayer();
       }, this);
 
-    this.levelState.visualText.setNewText('         get all of your staff!', 11500, true);
-    this.levelState.visualText.vanishText(13500, 1000);
+    this.levelState.visualText.setNewText('         get all of your staff!', 13500, true);
+    this.levelState.visualText.vanishText(15500, 1000);
 
-    game.time.events.add(10000,
+    game.time.events.add(12000,
       () =>
       {
         this.levelState.boss.displayObject.state.setAnimation(0, 'monster_idle', true);
       }, this);
 
-    game.time.events.add(12000,
+    game.time.events.add(14000,
       () =>
       {
         //this.levelState.boss.displayObject.state.setAnimation(0, 'monster_idle', true);
         this.levelState.gui_ItemsBar.hitPlayerCell();
       }, this);
 
-    this.levelState.visualText.setNewText('The more you have, the worse  i t i s', 15000, true);
-    this.levelState.visualText.vanishText(16500, 1000);
+    this.levelState.visualText.setNewText('The more you have, the worse  i t i s', 17000, true);
+    this.levelState.visualText.vanishText(22500, 1000);
 
-    game.time.events.add(14500,
+    game.time.events.add(17500,
       () =>
       {
           this.levelState.gui_HealthBar.hitPlayer();
 
       }, this);
 
-    game.time.events.add(17500,
+    game.time.events.add(20500,
       () =>
       {
         this.player.setState(this.player.playerState_Idle);

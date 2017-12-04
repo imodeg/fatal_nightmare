@@ -229,13 +229,13 @@ class Player extends Phaser.Sprite
 
             break;
         case 'Enemy_Spider':
-            this.hit(15, bodyB.parent.sprite.position);
+            this.hit(7, bodyB.parent.sprite.position);
             break;
         case 'Enemy_Cat':
             this.hit(5, bodyB.parent.sprite.position);
             break;
         case 'Enemy_Flyer_Bullet':
-            this.hit(5, bodyB.parent.sprite.position);
+            this.hit(4, bodyB.parent.sprite.position);
             bodyB.parent.sprite.destroyBullet();
             break;
         default:

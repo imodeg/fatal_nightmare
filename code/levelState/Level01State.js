@@ -69,7 +69,7 @@ class Level01State extends Phaser.State
     this.visualText = new BitmapTextAnimated(60, 560, 'asdassdasd', 32);
     this.guiGroup.add(this.visualText);
     this.visualText.setNewText('I want to take a little nap', 2000);
-    this.visualText.vanishText(5000, 1000);
+    this.visualText.vanishText(7000, 1000);
 
     this.darkScreen = new Phaser.Sprite(game, 0, 0, 'darkScreen');
     this.darkScreen.fixedToCamera = true;

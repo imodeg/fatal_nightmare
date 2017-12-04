@@ -71,7 +71,7 @@ class LevelTheEndBed extends Phaser.State
     this.visualText = new BitmapTextAnimated(60, 560, 'asdassdasd', 32);
     this.guiGroup.add(this.visualText);
     this.visualText.setNewText('i t was strange dream', 2500);
-    this.visualText.vanishText(4000, 1000);
+    //this.visualText.vanishText(4000, 1000);
 
     this.darkScreen = new Phaser.Sprite(game, 0, 0, 'darkScreen');
     this.darkScreen.fixedToCamera = true;

@@ -15,7 +15,7 @@ class Enemy_Tumbler extends Phaser.Sprite
     this.body.clearShapes();
 
     this.bottomContactShape = this.body.addCircle(20, 0, -16, 0); //bottom floor collide shape
-    this.body.setMaterial(this.levelState.physMaterials.floorContactMaterial, this.bottomContactShape);
+    this.body.setMaterial(this.levelState.physMaterials.floorContactMaterialTumbler, this.bottomContactShape);
 
     this.mainBodyShape = this.body.addRectangle(50, 100, 0, -70, 0); //main body shape
     this.body.setMaterial(this.levelState.physMaterials.mainBodyMaterial, this.mainBodyShape);

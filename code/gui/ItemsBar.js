@@ -57,7 +57,7 @@ class ItemsBar extends Phaser.Sprite
       tween1.onComplete.addOnce(
         ()=>
         {
-          this.levelState.player.hitStatic(10);
+          this.levelState.player.hitStatic(5);
           this.itemsArray[i].kill();
         });
     }

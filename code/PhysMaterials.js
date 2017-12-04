@@ -3,6 +3,7 @@ class PhysMaterials
   constructor()
   {
     this.floorContactMaterial = game.physics.p2.createMaterial();
+    this.floorContactMaterialTumbler = game.physics.p2.createMaterial();
     this.mainBodyMaterial = game.physics.p2.createMaterial();
     this.kickMaterial = game.physics.p2.createMaterial();
     this.freeMaterial = game.physics.p2.createMaterial(); //material not collide with stuff
@@ -10,6 +11,16 @@ class PhysMaterials
     this.landscapeMaterial = game.physics.p2.createMaterial();
 
     this.objectsMaterial = game.physics.p2.createMaterial();
+
+    game.physics.p2.createContactMaterial(this.floorContactMaterialTumbler, this.landscapeMaterial, //for contac with floor
+      {
+        friction: 1,
+        restitution: 0,
+        stiffness: 100000000000000,
+        relaxation: 2,
+        frictionStiffness: 1000000,
+        frictionRelaxation: 100
+      });
 
     game.physics.p2.createContactMaterial(this.floorContactMaterial, this.landscapeMaterial, //for contac with floor
       {

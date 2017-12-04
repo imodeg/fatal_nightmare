@@ -70,11 +70,11 @@ class Enemy_CatStateIdle extends Enemy_CatStateBase
   {
     this.clearHitShape();
     this.monster.displayObject.state.setAnimation(0, 'monster_idle', true);
-    let genereteTime = game.rnd.integerInRange(140, 500);
+    let genereteTime = game.rnd.integerInRange(500, 900);
     let genereteNum = game.rnd.integerInRange(1, 2);
     if(genereteNum == 1)
     {
-      this.timer = game.time.events.add(500,
+      this.timer = game.time.events.add(genereteTime,
         () =>
         {
           this.monster.setState(this.monster.enemyCatState_KickLow);
@@ -82,7 +82,7 @@ class Enemy_CatStateIdle extends Enemy_CatStateBase
     }
     else
     {
-      this.timer = game.time.events.add(500,
+      this.timer = game.time.events.add(genereteTime,
         () =>
         {
           this.monster.setState(this.monster.enemyCatState_KickHigh);

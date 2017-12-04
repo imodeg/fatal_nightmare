@@ -455,7 +455,7 @@ class PlayerStateKickWeapon_02 extends PlayerStateBase
         {
           this.player.body.moveLeft(100);
         }
-        this.player.body.moveUp(500);
+        this.player.body.moveUp(350);
       }, this);
 
     this.timer = game.time.events.add(500,
@@ -507,7 +507,7 @@ class PlayerStateKickWeapon_02 extends PlayerStateBase
       () =>
       {
         entity.hit(2);
-        entityBody.parent.moveUp(600);
+        //entityBody.parent.moveUp(600);
         //entityBody.parent.applyImpulse([0,600], 0, 0);
       }, this);
   }
