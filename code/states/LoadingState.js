@@ -124,6 +124,7 @@ class LoadingState extends Phaser.State
     game.load.json('map03', 'levels/Level_03.json');
     game.load.json('mapFinal', 'levels/Level_final.json');
     game.load.json('mapBed', 'levels/Level_TheEndBed.json');
+    game.load.json('mapGood', 'levels/Level_TheEndGood.json');
 
 
     game.load.image('graphics/Dirt_01.png', 'levels/graphics/Dirt_01.png');
@@ -270,6 +271,7 @@ class LoadingState extends Phaser.State
     game.load.image('graphics/badface01.png', 'levels/graphics/badface01.png');
     game.load.image('graphics/eye3.png', 'levels/graphics/eye3.png');
     game.load.image('graphics/eye.png', 'levels/graphics/eye.png');
+    game.load.image('graphics/catana_back.png', 'levels/graphics/catana_back.png');
 
     game.load.image('graphics/item_dimond.png', 'levels/graphics/item_dimond.png');
     game.load.image('graphics/item_money.png', 'levels/graphics/item_money.png');
@@ -281,6 +283,7 @@ class LoadingState extends Phaser.State
     game.load.image('graphics/ground1.png', 'levels/graphics/ground1.png');
     game.load.image('graphics/ground2.png', 'levels/graphics/ground2.png');
     game.load.image('graphics/ground3.png', 'levels/graphics/ground3.png');
+    game.load.image('graphics/cat.png', 'levels/graphics/cat.png');
 
     game.load.audio('finalMusic', 'audio/finalMusic.mp3');
     game.load.audio('startGameSfx', 'audio/startGame.mp3');
@@ -290,13 +293,17 @@ class LoadingState extends Phaser.State
     game.load.audio('swordSwing02Sfx', 'audio/swordSwing02.mp3');
     game.load.audio('takeItemSfx', 'audio/takeItem.mp3');
     game.load.audio('monsterDeathSfx', 'audio/monsterDeath.mp3');
-
+    game.load.audio('boss_deathSfx', 'audio/boss_death.mp3');
     game.load.audio('playerJump01Sfx', 'audio/PlayerJump01.mp3');
     game.load.audio('playerJump02Sfx', 'audio/PlayerJump02.mp3');
     game.load.audio('playerHit01Sfx', 'audio/PlayerHit01.mp3');
     game.load.audio('playerHit02Sfx', 'audio/PlayerHit02.mp3');
     game.load.audio('playerYawnSfx', 'audio/PlayerYawn.mp3');
     game.load.audio('playerTakeWeaponSfx', 'audio/takeWeapon.mp3');
+    game.load.audio('ambient', 'audio/ambient.mp3');
+
+
+
 
     game.load.start();
   }
@@ -349,6 +356,7 @@ class LoadingState extends Phaser.State
         //game.state.start('Level03State');
         //game.state.start('LevelFinalState');
         //game.state.start('levelTheEndBed');
+        //game.state.start('levelTheEndGood');
       });
 
       game.load.onLoadStart.removeAll();

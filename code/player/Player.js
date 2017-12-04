@@ -135,8 +135,6 @@ class Player extends Phaser.Sprite
       if(this.health <= 0)
       {
         this.health = 1;
-        this.alive = false;
-        //this.setState(this.playerState_Death);
       }
     }
   }
@@ -145,7 +143,7 @@ class Player extends Phaser.Sprite
   {
     if(this.alive)
     {
-      game.camera.flash(0xBB0000, 500, true, 0.2);
+      game.camera.flash(0xBB0000, 500, false, 0.2);
 
       this.health -= damage;
       this.levelState.gui_HealthBar.setHealth(this.health);
@@ -210,6 +208,10 @@ class Player extends Phaser.Sprite
           if (shapeB.sensor == false)
           {this.state.hitEntity(bodyB);}
           break;
+        case 'Enemy_Cat':
+          if (shapeB.sensor == false)
+          {this.state.hitEntity(bodyB);}
+          break;
         case 'Enemy_Flyer_Bullet':
           if (shapeB.sensor == true)
           {bodyB.parent.sprite.destroyBullet();}
@@ -228,6 +230,9 @@ class Player extends Phaser.Sprite
             break;
         case 'Enemy_Spider':
             this.hit(15, bodyB.parent.sprite.position);
+            break;
+        case 'Enemy_Cat':
+            this.hit(5, bodyB.parent.sprite.position);
             break;
         case 'Enemy_Flyer_Bullet':
             this.hit(5, bodyB.parent.sprite.position);

@@ -77,37 +77,19 @@ class LevelFinalState extends Phaser.State
     this.darkScreen.alpha = (GameCfg.itemsArray.length * 12)/100;
 
 
-    this.startMusic = game.add.audio('finalMusic');
-    this.startMusic.onDecoded.add(
+    this.finalMusic = game.add.audio('finalMusic');
+    this.ambientMusic = game.add.audio('ambient');
+    this.ambientMusic.onDecoded.add(
       ()=>
       {
-        this.startMusic.loopFull(0.4);
-        //this.startMusic.fadeIn(2000);
+        this.ambientMusic.loopFull(1);
       }, this);
-    //text.setNewText('loooolllllllllllllllllllllllllll',500, true);
-    //text.setNewText('ddsdsdsd',2500, false);
-    //text.setNewText('loooolllllllllllllllllllllllllll',4500, true);
-    //let text = game.add.bitmapText(200, 100, 'mainfont','Bitmap Fonts!',32);
-
-    /*
-    var box = game.add.sprite(1000, 200, 'block');
-    game.physics.p2.enable(box);
-    box.body.mass = 10;
-    box.body.setMaterial(this.physMaterials.objectsMaterial);
-    */
-    //temp add to editor
-    //BackCloud_01
-    //let delay = 0;
-    //for (var i = 0; i < 50; i++)
-    //{
-    //    //game.add.sprite(game.world.randomX, game.world.randomY, 'BackCloud_01');
-    //    let cloudNum = game.rnd.integerInRange(1, 3);
-    //    let imgKey = 'BackCloud_0' + cloudNum;
-    //    let cloudObj = this.layerBackground.create(-800, game.world.randomY/3, imgKey);
-
-    //    game.add.tween(cloudObj).to({ x: 1900 }, 50000, Phaser.Easing.Linear.InOut, true, delay, 1000, false);
-    //    delay += 20000;
-    //}
+    //this.startMusic.onDecoded.add(
+    //  ()=>
+    //  {
+    //    this.startMusic.loopFull(0.4);
+    //    //this.startMusic.fadeIn(2000);
+    //  }, this);
   }
 
   fadeOut()
@@ -166,7 +148,8 @@ class LevelFinalState extends Phaser.State
   {
     this.soundController.kill();
     this.player.stopPlayer();
-    this.startMusic.stop();
+    this.finalMusic.stop();
+    this.ambientMusic.stop();
   }
 }
 

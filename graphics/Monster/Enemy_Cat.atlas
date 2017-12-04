@@ -6,147 +6,140 @@ filter: Linear,Linear
 repeat: none
 cat_body
   rotate: false
-  xy: 785, 549
+  xy: 440, 280
   size: 55, 52
   orig: 55, 52
   offset: 0, 0
   index: -1
 cat_head_small
   rotate: false
-  xy: 401, 208
+  xy: 391, 492
   size: 39, 38
   orig: 39, 38
   offset: 0, 0
   index: -1
 cat_jaw
-  rotate: true
-  xy: 993, 975
+  rotate: false
+  xy: 0, 0
   size: 31, 21
   orig: 31, 21
   offset: 0, 0
   index: -1
 cat_mouth
   rotate: false
-  xy: 0, 0
+  xy: 409, 263
   size: 11, 10
   orig: 11, 10
   offset: 0, 0
   index: -1
 cat_mutant_big_tentacle2
   rotate: false
-  xy: 391, 520
+  xy: 391, 531
   size: 309, 185
   orig: 309, 185
   offset: 0, 0
   index: -1
 cat_mutant_front_bottoms
   rotate: true
-  xy: 705, 662
+  xy: 705, 673
   size: 344, 154
   orig: 344, 154
   offset: 0, 0
   index: -1
 cat_mutant_inside
   rotate: false
-  xy: 401, 308
+  xy: 257, 274
   size: 182, 211
   orig: 182, 211
   offset: 0, 0
   index: -1
 cat_mutant_lowerjaw
-  rotate: true
-  xy: 584, 338
+  rotate: false
+  xy: 440, 333
   size: 181, 136
   orig: 181, 136
   offset: 0, 0
   index: -1
-cat_mutant_meat_begin
-  rotate: true
-  xy: 257, 240
-  size: 234, 143
-  orig: 234, 143
-  offset: 0, 0
-  index: -1
 cat_mutant_upperhead
   rotate: false
-  xy: 0, 741
+  xy: 0, 752
   size: 390, 265
   orig: 390, 265
   offset: 0, 0
   index: -1
 cat_small_tentacle
   rotate: true
-  xy: 701, 602
+  xy: 257, 214
   size: 59, 151
   orig: 59, 151
   offset: 0, 0
   index: -1
 cat_tail
   rotate: false
-  xy: 584, 308
+  xy: 993, 988
   size: 30, 29
   orig: 30, 29
   offset: 0, 0
   index: -1
 catmutant_attack_low
   rotate: false
-  xy: 401, 247
+  xy: 440, 470
   size: 265, 60
   orig: 265, 60
   offset: 0, 0
   index: -1
 catmutant_big_tentacle1
   rotate: true
-  xy: 0, 11
+  xy: 0, 22
   size: 155, 267
   orig: 155, 267
   offset: 0, 0
   index: -1
 catmutant_leftside
   rotate: false
-  xy: 0, 167
+  xy: 0, 178
   size: 256, 307
   orig: 256, 307
   offset: 0, 0
   index: -1
 catmutant_rightside
   rotate: false
-  xy: 391, 706
+  xy: 391, 717
   size: 313, 300
   orig: 313, 300
   offset: 0, 0
   index: -1
 catmutant_upperjaw
-  rotate: false
-  xy: 257, 177
+  rotate: true
+  xy: 622, 358
   size: 111, 62
   orig: 111, 62
   offset: 0, 0
   index: -1
 ctmtnt_tongue_attack
   rotate: true
-  xy: 860, 601
+  xy: 860, 612
   size: 405, 132
   orig: 405, 132
   offset: 0, 0
   index: -1
 ctmtnt_upperhead_damaged
   rotate: false
-  xy: 0, 475
+  xy: 0, 486
   size: 390, 265
   orig: 390, 265
   offset: 0, 0
   index: -1
 mtnt_blood1
-  rotate: true
-  xy: 701, 526
+  rotate: false
+  xy: 701, 589
   size: 75, 83
   orig: 75, 83
   offset: 0, 0
   index: -1
 mtnt_blood2
-  rotate: false
-  xy: 369, 198
+  rotate: true
+  xy: 257, 182
   size: 31, 41
   orig: 31, 41
   offset: 0, 0

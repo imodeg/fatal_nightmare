@@ -58,9 +58,11 @@ class LevelTheEndBed extends Phaser.State
     //gui
     this.gui_HealthBar = new HealthBar(this, 20, 20);
     this.guiGroup.add(this.gui_HealthBar);
+    this.gui_HealthBar.alpha = 0;
 
     this.gui_ItemsBar = new ItemsBar(this, GameCfg.width-30, 30);
     this.guiGroup.add(this.gui_ItemsBar);
+    this.gui_ItemsBar.alpha = 0;
 
     this.fade = game.add.graphics(0, 0);
     this.fade.fixedToCamera = true;
@@ -68,8 +70,8 @@ class LevelTheEndBed extends Phaser.State
 
     this.visualText = new BitmapTextAnimated(60, 560, 'asdassdasd', 32);
     this.guiGroup.add(this.visualText);
-    this.visualText.setNewText('i t was strange', 3000);
-    this.visualText.vanishText(4500, 1000);
+    this.visualText.setNewText('i t was strange dream', 2500);
+    this.visualText.vanishText(4000, 1000);
 
     this.darkScreen = new Phaser.Sprite(game, 0, 0, 'darkScreen');
     this.darkScreen.fixedToCamera = true;
@@ -78,14 +80,22 @@ class LevelTheEndBed extends Phaser.State
 
     this.player.setState(this.player.playerState_Empty);
     this.player.displayObject.state.setAnimation(0, 'WakeUp', false);
+    this.player.displayObject.scale.x = -1;
     //this.player.cameraFollowObj.x = -200;
     let tween = game.add.tween(this.player.cameraFollowObj).to( { x: -180 }, 2000, Phaser.Easing.Sinusoidal.InOut, true, 0);
 
-    this.timer = game.time.events.add(6000,
+    this.timer = game.time.events.add(5500,
       () =>
       {
         game.camera.fade(0x000000, 2000, true);
       }, this);
+
+    this.timer = game.time.events.add(8500,
+      () =>
+      {
+        game.state.start('LoadingState');
+      }, this);
+
     /*
     var box = game.add.sprite(1000, 200, 'block');
     game.physics.p2.enable(box);

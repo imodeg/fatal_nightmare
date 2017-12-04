@@ -907,7 +907,6 @@
   </object>
   <object id="742" name="Enemy_Spider" type="MonsterSpawner" x="3004.64" y="1094.24"/>
   <object id="743" name="Enemy_Spider" type="MonsterSpawner" x="8620" y="916"/>
-  <object id="744" name="Enemy_Flyer" type="MonsterSpawner" x="7936" y="234"/>
   <object id="745" name="Enemy_Flyer" type="MonsterSpawner" x="4652" y="156"/>
   <object id="746" name="Enemy_Tumbler" type="MonsterSpawner" x="1742.42" y="806.061"/>
   <object id="747" name="Enemy_Tumbler" type="MonsterSpawner" x="2152" y="496"/>

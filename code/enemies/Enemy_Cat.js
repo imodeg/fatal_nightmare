@@ -12,8 +12,9 @@ class Enemy_Cat extends Phaser.Sprite
     this.body.clearShapes();
 
     this.mainBodyShape = this.body.addRectangle(500, 400, -40, -230, 0); //main body shape
-    this.body.setMaterial(this.levelState.physMaterials.mainBodyMaterial, this.mainBodyShape);
-    this.body.entityType = 'Enemy_Flyer';
+    //this.mainBodyShape = this.body.addCircle(0, 0, -100, 0);
+    this.body.setMaterial(this.levelState.physMaterials.floorContactMaterial, this.mainBodyShape);
+    this.body.entityType = 'Enemy_Cat';
 
     this.kickContactShape = this.body.addCircle(15, 0, -60, 0);
     this.kickContactShape.sensor = true;
@@ -21,9 +22,9 @@ class Enemy_Cat extends Phaser.Sprite
 
 
     this.body.fixedRotation = true;
-    this.body.mass = 500;
-    this.body.data.gravityScale = 0;
+    this.body.mass = 100000;
     this.body.damping = 0.9;
+    //this.body.static = true;
 
     this.displayObject = new PhaserSpine.Spine(game, 0, 0, 'EnemyCat');
     this.displayObject.state.setAnimation(0, 'kitten_idle', true);
@@ -32,15 +33,16 @@ class Enemy_Cat extends Phaser.Sprite
 
     this.dirrection = 'right';
 
-
     this.enemyCatState_Empty = new Enemy_CatStateBase(this);
     this.enemyCatState_Idle = new Enemy_CatStateIdle(this);
-    this.enemyCatState_Kick = new Enemy_CatStateKick(this);
+    this.enemyCatState_IdleCat = new Enemy_CatStateIdleCat(this);
+    this.enemyCatState_KickLow = new Enemy_CatStateKickLow(this);
+    this.enemyCatState_KickHigh = new Enemy_CatStateKickHigh(this);
     this.enemyCatState_Hit = new Enemy_CatStateHit(this);
     this.enemyCatState_Death = new Enemy_CatStateDeath(this);
 
-    this.state = this.enemyCatState_Idle;
-    this.setState(this.enemyCatState_Idle);
+    this.state = this.enemyCatState_IdleCat;
+    this.setState(this.enemyCatState_IdleCat);
   }
 
   setState(state)
@@ -69,7 +71,7 @@ class Enemy_Cat extends Phaser.Sprite
       if(this.health <= 0)
       {
         this.alive = false;
-        this.setState(this.enemyFlyerState_Death);
+        this.setState(this.enemyCatState_Death);
       }
     }
   }
@@ -78,5 +80,6 @@ class Enemy_Cat extends Phaser.Sprite
   {
     this.displayObject.update();
     this.state.update();
+    this.body.moveDown(500);
   }
 }

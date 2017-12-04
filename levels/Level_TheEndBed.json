@@ -304,16 +304,16 @@
                  "y":632.667
                 }, 
                 {
-                 "gid":35,
-                 "height":247.916230366492,
-                 "id":94,
+                 "gid":77,
+                 "height":281.527559055118,
+                 "id":96,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":204.103448275862,
-                 "x":523,
-                 "y":507
+                 "width":354,
+                 "x":481,
+                 "y":532.763779527559
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -544,7 +544,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":96,
+ "nextobjectid":98,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"2017.07.25",
@@ -562,7 +562,7 @@
          "margin":0,
          "name":"Decoretions",
          "spacing":0,
-         "tilecount":73,
+         "tilecount":74,
          "tileheight":486,
          "tiles":
             {
@@ -992,6 +992,12 @@
                  "imageheight":158,
                  "imagewidth":369
                 },
+             "76":
+                {
+                 "image":"graphics\/catana_back.png",
+                 "imageheight":202,
+                 "imagewidth":254
+                },
              "8":
                 {
                  "image":"graphics\/Decor01.png",
@@ -1003,6 +1009,321 @@
                  "image":"graphics\/Decor02.png",
                  "imageheight":270,
                  "imagewidth":86
+                }
+            },
+         "tilewidth":1026
+        }, 
+        {
+         "columns":0,
+         "firstgid":78,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"Decoretions",
+         "spacing":0,
+         "tilecount":74,
+         "tileheight":486,
+         "tiles":
+            {
+             "10":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Decor03.png"
+                },
+             "11":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Decor04.png"
+                },
+             "12":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Decor05.png"
+                },
+             "13":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Rock_01.png"
+                },
+             "14":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Rock_02.png"
+                },
+             "15":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Rock_03.png"
+                },
+             "16":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Rock_04.png"
+                },
+             "17":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Gress_01.png"
+                },
+             "18":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Gress_02.png"
+                },
+             "19":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Tree01.png"
+                },
+             "20":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Tree02.png"
+                },
+             "21":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Tree03.png"
+                },
+             "22":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Flare_01.png"
+                },
+             "23":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Flare_02.png"
+                },
+             "24":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Flare_03.png"
+                },
+             "25":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/bed.png"
+                },
+             "26":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/bed2.png"
+                },
+             "27":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Cabinet.png"
+                },
+             "28":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Commode.png"
+                },
+             "29":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/lamp1.png"
+                },
+             "3":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Dirt_01.png"
+                },
+             "30":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Light1.png"
+                },
+             "31":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/mirror.png"
+                },
+             "32":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/carpet.png"
+                },
+             "33":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/bear_good.png"
+                },
+             "34":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/bear_evil.png"
+                },
+             "35":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/r_09.png"
+                },
+             "36":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/back_01.png"
+                },
+             "37":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/3back_08.png"
+                },
+             "38":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/3back_09.png"
+                },
+             "39":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/2back_05.png"
+                },
+             "4":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Dirt_02.png"
+                },
+             "40":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/2back_06.png"
+                },
+             "41":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/2back_07.png"
+                },
+             "42":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/3back_10.png"
+                },
+             "43":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/3back_11.png"
+                },
+             "44":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/back_02.png"
+                },
+             "45":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/back_03.png"
+                },
+             "46":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/back_04.png"
+                },
+             "47":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Cloud_001.png"
+                },
+             "48":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Cloud_002.png"
+                },
+             "49":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/kust_01.png"
+                },
+             "5":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Dirt_03.png"
+                },
+             "50":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/kust_02.png"
+                },
+             "51":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/kust_03.png"
+                },
+             "52":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/kust_04.png"
+                },
+             "53":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/kust1.png"
+                },
+             "54":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/kust2.png"
+                },
+             "55":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/kust3.png"
+                },
+             "56":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/kust4.png"
+                },
+             "57":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/most1.png"
+                },
+             "58":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/most2.png"
+                },
+             "59":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/most3.png"
+                },
+             "6":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/DirtPurp_01.png"
+                },
+             "60":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/r_01.png"
+                },
+             "61":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/r_02.png"
+                },
+             "62":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/r_03.png"
+                },
+             "63":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/r_04.png"
+                },
+             "64":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/r_05.png"
+                },
+             "65":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/r_06.png"
+                },
+             "66":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/r_07.png"
+                },
+             "67":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/r_08.png"
+                },
+             "68":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/r_10.png"
+                },
+             "69":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/r_11.png"
+                },
+             "7":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/DirtPurp_02.png"
+                },
+             "70":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/r_12.png"
+                },
+             "71":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/r_13.png"
+                },
+             "72":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/r_14.png"
+                },
+             "73":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/r_15.png"
+                },
+             "74":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/r_16.png"
+                },
+             "75":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/BadShadow.png"
+                },
+             "76":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/catana_back.png"
+                },
+             "8":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Decor01.png"
+                },
+             "9":
+                {
+                 "image":"d:\/CONTENT\/PROJECTS\/LudumDare\/levels\/graphics\/Decor02.png"
                 }
             },
          "tilewidth":1026

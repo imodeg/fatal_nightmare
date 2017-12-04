@@ -2785,8 +2785,8 @@
                  "type":"Player",
                  "visible":true,
                  "width":0,
-                 "x":343.775,
-                 "y":432.662
+                 "x":299.320454545454,
+                 "y":451.358969696969
                 }, 
                 {
                  "height":0,
@@ -2796,8 +2796,8 @@
                  "type":"ItemObject",
                  "visible":true,
                  "width":0,
-                 "x":1243.33,
-                 "y":1146.67
+                 "x":1227.75424242424,
+                 "y":1098.42757575758
                 }, 
                 {
                  "height":811.152,
@@ -4438,6 +4438,34 @@
                  "width":0,
                  "x":2794,
                  "y":504
+                }, 
+                {
+                 "height":0,
+                 "id":576,
+                 "name":"",
+                 "polygon":[
+                        {
+                         "x":0,
+                         "y":0
+                        }, 
+                        {
+                         "x":-496,
+                         "y":-10
+                        }, 
+                        {
+                         "x":-544,
+                         "y":-730
+                        }, 
+                        {
+                         "x":12,
+                         "y":-826
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":2878,
+                 "y":2964
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4445,7 +4473,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":576,
+ "nextobjectid":578,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"2017.07.25",

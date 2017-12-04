@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="2017.07.25" orientation="orthogonal" renderorder="right-down" width="1" height="1" tilewidth="5000" tileheight="3640" nextobjectid="576">
+<map version="1.0" tiledversion="2017.07.25" orientation="orthogonal" renderorder="right-down" width="1" height="1" tilewidth="5000" tileheight="3640" nextobjectid="578">
  <tileset firstgid="1" name="Decoretions" tilewidth="1026" tileheight="572" tilecount="117" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="3">
@@ -1165,12 +1165,12 @@
   </properties>
  </objectgroup>
  <objectgroup name="Entity">
-  <object id="522" type="Player" x="343.775" y="432.662">
+  <object id="522" type="Player" x="299.32" y="451.359">
    <properties>
     <property name="armored" type="bool" value="true"/>
    </properties>
   </object>
-  <object id="556" name="item_6" type="ItemObject" x="1243.33" y="1146.67"/>
+  <object id="556" name="item_6" type="ItemObject" x="1227.75" y="1098.43"/>
   <object id="559" type="TriggerPlace_Finale" x="2127.33" y="2783.09" width="264.848" height="811.152"/>
   <object id="561" type="Enemy_Cat" x="2623.67" y="3411"/>
   <object id="566" name="Enemy_Spider" type="MonsterSpawner" x="1667.23" y="804.003"/>
@@ -1338,6 +1338,9 @@
   </object>
   <object id="557" x="2794" y="504">
    <polygon points="0,0 404,40 646,108 714,284 17,255"/>
+  </object>
+  <object id="576" x="2878" y="2964">
+   <polygon points="0,0 -496,-10 -544,-730 12,-826"/>
   </object>
  </objectgroup>
 </map>

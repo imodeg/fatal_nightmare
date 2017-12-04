@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" tiledversion="2017.07.25" orientation="orthogonal" renderorder="right-down" width="1" height="1" tilewidth="1700" tileheight="640" nextobjectid="99">
- <tileset firstgid="1" name="Decoretions" tilewidth="1026" tileheight="486" tilecount="79" columns="0">
+ <tileset firstgid="1" name="Decoretions" tilewidth="1026" tileheight="486" tilecount="80" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="3">
    <image width="387" height="102" source="graphics/Dirt_01.png"/>
@@ -238,6 +238,9 @@
   </tile>
   <tile id="81">
    <image width="80" height="80" source="graphics/item_perfume.png"/>
+  </tile>
+  <tile id="82">
+   <image width="80" height="78" source="graphics/cat.png"/>
   </tile>
  </tileset>
  <objectgroup color="#000000" name="BackColor" locked="1">

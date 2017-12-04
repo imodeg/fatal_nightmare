@@ -14,6 +14,7 @@ class SoundController
     this.playerHit02 = game.add.audio('playerHit02Sfx');
     this.playerYawn = game.add.audio('playerYawnSfx');
     this.playerTakeWeapon = game.add.audio('playerTakeWeaponSfx');
+    this.boss_death = game.add.audio('boss_deathSfx');
   }
 
   kill()

@@ -30,11 +30,12 @@ class Enemy_CatStateBase
 }
 
 
-class Enemy_CatStateIdle extends Enemy_CatStateBase
+class Enemy_CatStateIdleCat extends Enemy_CatStateBase
 {
   constructor(monster)
   {
     super(monster);
+    this.timer = null;
   }
 
   start()
@@ -57,26 +58,80 @@ class Enemy_CatStateIdle extends Enemy_CatStateBase
   }
 }
 
+class Enemy_CatStateIdle extends Enemy_CatStateBase
+{
+  constructor(monster)
+  {
+    super(monster);
+    this.timer = null;
+  }
 
-class Enemy_CatStateKick extends Enemy_CatStateBase
+  start()
+  {
+    this.clearHitShape();
+    this.monster.displayObject.state.setAnimation(0, 'monster_idle', true);
+    let genereteTime = game.rnd.integerInRange(140, 500);
+    let genereteNum = game.rnd.integerInRange(1, 2);
+    if(genereteNum == 1)
+    {
+      this.timer = game.time.events.add(500,
+        () =>
+        {
+          this.monster.setState(this.monster.enemyCatState_KickLow);
+        }, this);
+    }
+    else
+    {
+      this.timer = game.time.events.add(500,
+        () =>
+        {
+          this.monster.setState(this.monster.enemyCatState_KickHigh);
+        }, this);
+    }
+  }
+
+  update()
+  {
+    if(Phaser.Point.distance(this.monster.position, this.monster.levelState.player.position) < 900)
+    {
+
+    }
+  }
+
+  clear()
+  {
+    game.time.events.remove(this.timer);
+  }
+}
+
+class Enemy_CatStateKickLow extends Enemy_CatStateBase
 {
   constructor(monster)
   {
     super(monster);
     this.timerSetIdle = null;
     this.timer = null;
+    this.timerSetHitShape = null;
   }
 
   start()
   {
-    this.monster.displayObject.state.setAnimation(0, 'kitten_idle', false);
+    this.monster.displayObject.state.setAnimation(0, 'attack_low', false);
 
-    this.monster.levelState.layerEntities.add(new Enemy_Cat_Bullet(this.monster.levelState, this.monster.x, this.monster.y-80));
-
-    this.timer = game.time.events.add(3000,
+    this.timer = game.time.events.add(1500,
       () =>
       {
-        this.monster.setState(this.monster.enemyCatState_Kick);
+        this.monster.setState(this.monster.enemyCatState_Idle);
+      }, this);
+
+
+    this.timerSetHitShape = game.time.events.add(100,
+      () =>
+      {
+          this.monster.kickContactShape.position[0] = 24;
+          this.monster.kickContactShape.position[1] = -5;
+          this.monster.kickContactShape.radius = 13;
+          this.monster.body.shapeChanged();
       }, this);
   }
 
@@ -90,6 +145,52 @@ class Enemy_CatStateKick extends Enemy_CatStateBase
     this.clearHitShape();
     game.time.events.remove(this.timer);
     game.time.events.remove(this.timerSetIdle);
+    game.time.events.remove(this.timerSetHitShape);
+
+  }
+}
+
+class Enemy_CatStateKickHigh extends Enemy_CatStateBase
+{
+  constructor(monster)
+  {
+    super(monster);
+    this.timerSetIdle = null;
+    this.timer = null;
+    this.timerSetHitShape = null;
+  }
+
+  start()
+  {
+    this.monster.displayObject.state.setAnimation(0, 'attack_high', false);
+
+    this.timer = game.time.events.add(1500,
+      () =>
+      {
+        this.monster.setState(this.monster.enemyCatState_Idle);
+      }, this);
+
+    this.timerSetHitShape = game.time.events.add(100,
+      () =>
+      {
+          this.monster.kickContactShape.position[0] = 24;
+          this.monster.kickContactShape.position[1] = 25;
+          this.monster.kickContactShape.radius = 10;
+          this.monster.body.shapeChanged();
+      }, this);
+  }
+
+  update()
+  {
+
+  }
+
+  clear()
+  {
+    this.clearHitShape();
+    game.time.events.remove(this.timer);
+    game.time.events.remove(this.timerSetIdle);
+      game.time.events.remove(this.timerSetHitShape);
   }
 }
 
@@ -103,12 +204,18 @@ class Enemy_CatStateHit extends Enemy_CatStateBase
 
   start()
   {
-    this.monster.displayObject.state.setAnimation(0, 'kitten_idle', false);
+    console.log(this.monster.health)
+    this.monster.displayObject.state.setAnimation(0, 'damage', false);
     this.timer = game.time.events.add(600,
       () =>
       {
         this.monster.setState(this.monster.enemyCatState_Idle);
       });
+    let genereteNum = game.rnd.integerInRange(1, 2);
+    if(genereteNum == 1)
+    {
+      this.monster.levelState.player.body.moveLeft(1200);
+    }
   }
 
   update()
@@ -133,13 +240,22 @@ class Enemy_CatStateDeath extends Enemy_CatStateBase
 
   start()
   {
-    this.monster.displayObject.state.setAnimation(0, 'kitten_idle', false);
-    this.timer = game.time.events.add(200,
+    this.monster.levelState.soundController.boss_death.play();
+    this.monster.displayObject.state.setAnimation(0, 'death', false);
+
+      this.monster.levelState.visualText.setNewText('i t i s not good', 500);
+      this.monster.levelState.visualText.vanishText(2500, 1000);
+
+    this.timer = game.time.events.add(5500,
       () =>
       {
-        this.deathShapeApply();
-      });
-
+        game.camera.fade(0x000000, 2000, true);
+      }, this);
+    this.timer = game.time.events.add(8500,
+      () =>
+      {
+        game.state.start('levelTheEndBed');
+      }, this);
   }
 
   update()
@@ -149,12 +265,5 @@ class Enemy_CatStateDeath extends Enemy_CatStateBase
 
   clear()
   {
-  }
-
-  deathShapeApply()
-  {
-    this.monster.body.clearShapes();
-    this.monster.mainBodyShape = this.monster.body.addRectangle(10, 10, 0, 0, 0); //main body shape
-    this.monster.body.data.gravityScale = 2;
   }
 }

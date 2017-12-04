@@ -24,6 +24,10 @@ class HealthBar extends Phaser.Sprite
   setHealth(health)
   {
     health = health/100;
+    if(health < 0)
+    {
+      health = 0;
+    }
     this.healthBar_line.scale.x = health;
   }
 

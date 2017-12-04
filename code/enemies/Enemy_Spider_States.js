@@ -225,7 +225,7 @@ class Enemy_SpiderStateDeath extends Enemy_SpiderStateBase
   {
     this.monster.levelState.soundController.monsterDeath.play();
     this.monster.displayObject.state.setAnimation(0, 'death', false);
-    this.timer = game.time.events.add(200,
+    this.timer = game.time.events.add(400,
       () =>
       {
         this.deathShapeApply();

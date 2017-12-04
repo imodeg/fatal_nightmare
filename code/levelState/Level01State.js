@@ -69,31 +69,13 @@ class Level01State extends Phaser.State
     this.visualText = new BitmapTextAnimated(60, 560, 'asdassdasd', 32);
     this.guiGroup.add(this.visualText);
     this.visualText.setNewText('I want to take a little nap', 2000);
-    this.visualText.vanishText(4000, 1000);
+    this.visualText.vanishText(5000, 1000);
 
     this.darkScreen = new Phaser.Sprite(game, 0, 0, 'darkScreen');
     this.darkScreen.fixedToCamera = true;
     this.guiGroup.add(this.darkScreen);
     this.darkScreen.alpha = (GameCfg.itemsArray.length * 12)/100;
-    /*
-    var box = game.add.sprite(1000, 200, 'block');
-    game.physics.p2.enable(box);
-    box.body.mass = 10;
-    box.body.setMaterial(this.physMaterials.objectsMaterial);
-    */
-    //temp add to editor
-    //BackCloud_01
-    //let delay = 0;
-    //for (var i = 0; i < 50; i++)
-    //{
-    //    //game.add.sprite(game.world.randomX, game.world.randomY, 'BackCloud_01');
-    //    let cloudNum = game.rnd.integerInRange(1, 3);
-    //    let imgKey = 'BackCloud_0' + cloudNum;
-    //    let cloudObj = this.layerBackground.create(-800, game.world.randomY/3, imgKey);
 
-    //    game.add.tween(cloudObj).to({ x: 1900 }, 50000, Phaser.Easing.Linear.InOut, true, delay, 1000, false);
-    //    delay += 20000;
-    //}
   }
 
   fadeOut()

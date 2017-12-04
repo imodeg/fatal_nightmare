@@ -193,7 +193,6 @@ class Map
         break;
 
       case 'MonsterSpawner':
-        console.log(object);
         newEntity = new MonsterSpawner(this.levelState, object.x, object.y, object.name);
         this.spawnerArray.push(newEntity);
         break;
