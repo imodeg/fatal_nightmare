@@ -364,6 +364,10 @@ class Player extends Phaser.Sprite
     key_jump.onDown.add(()=>{ this.onPressJump.dispatch(); });
     key_jump.onUp.add(()=>{ this.onReleaseJump.dispatch(); });
 
+    let key_jumpUp = game.input.keyboard.addKey(Phaser.Keyboard.UP);
+    key_jumpUp.onDown.add(()=>{ this.onPressJump.dispatch(); });
+    key_jumpUp.onUp.add(()=>{ this.onReleaseJump.dispatch(); });
+
     let key_kick = game.input.keyboard.addKey(Phaser.Keyboard.Z);
     key_kick.onDown.add(()=>{ this.onPressKick.dispatch(); });
     key_kick.onUp.add(()=>{ this.onReleaseKick.dispatch(); });

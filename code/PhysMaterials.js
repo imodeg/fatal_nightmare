@@ -13,7 +13,7 @@ class PhysMaterials
 
     game.physics.p2.createContactMaterial(this.floorContactMaterial, this.landscapeMaterial, //for contac with floor
       {
-        friction: 1,
+        friction: 3,
         restitution: 0,
         stiffness: 100000000000000,
         relaxation: 2,
