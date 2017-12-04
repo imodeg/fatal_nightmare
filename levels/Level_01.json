@@ -312,7 +312,55 @@
         {
          "draworder":"topdown",
          "name":"Front_03",
-         "objects":[],
+         "objects":[
+                {
+                 "gid":81,
+                 "height":80,
+                 "id":95,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":80,
+                 "x":1406,
+                 "y":328.666666666667
+                }, 
+                {
+                 "gid":77,
+                 "height":80,
+                 "id":96,
+                 "name":"",
+                 "rotation":23.0948864984008,
+                 "type":"",
+                 "visible":true,
+                 "width":80,
+                 "x":1483.51553871722,
+                 "y":299.770726083203
+                }, 
+                {
+                 "gid":80,
+                 "height":80,
+                 "id":97,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":80,
+                 "x":1396,
+                 "y":536.666666666667
+                }, 
+                {
+                 "gid":82,
+                 "height":80,
+                 "id":98,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":80,
+                 "x":1586,
+                 "y":297.333333333333
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -440,7 +488,7 @@
                  "type":"TriggerPlace_Win",
                  "visible":true,
                  "width":212,
-                 "x":1138.00333333333,
+                 "x":1138,
                  "y":14.6667
                 }],
          "opacity":1,
@@ -543,7 +591,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":94,
+ "nextobjectid":99,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"2017.07.25",
@@ -561,7 +609,7 @@
          "margin":0,
          "name":"Decoretions",
          "spacing":0,
-         "tilecount":73,
+         "tilecount":79,
          "tileheight":486,
          "tiles":
             {
@@ -991,11 +1039,47 @@
                  "imageheight":158,
                  "imagewidth":369
                 },
+             "76":
+                {
+                 "image":"graphics\/item_dimond.png",
+                 "imageheight":80,
+                 "imagewidth":80
+                },
+             "77":
+                {
+                 "image":"graphics\/item_ring.png",
+                 "imageheight":80,
+                 "imagewidth":80
+                },
+             "78":
+                {
+                 "image":"graphics\/item_shoes.png",
+                 "imageheight":80,
+                 "imagewidth":80
+                },
+             "79":
+                {
+                 "image":"graphics\/item_shoes_2.png",
+                 "imageheight":80,
+                 "imagewidth":80
+                },
              "8":
                 {
                  "image":"graphics\/Decor01.png",
                  "imageheight":292,
                  "imagewidth":188
+                },
+             "80":
+                {
+                 "image":"graphics\/item_money.png",
+                 "imageheight":80,
+                 "imagewidth":80
+                },
+             "81":
+                {
+                 "image":"graphics\/item_perfume.png",
+                 "imageheight":80,
+                 "imagewidth":80
                 },
              "9":
                 {

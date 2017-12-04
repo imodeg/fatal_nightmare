@@ -15,6 +15,7 @@ class Level01State extends Phaser.State
     this.player;
 
     this.gui_HealthBar;
+    this.soundController;
   }
 
   preload()
@@ -24,6 +25,7 @@ class Level01State extends Phaser.State
 
   create()
   {
+    this.soundController = new SoundController();
     game.stage.disableVisibilityChange = true;
     game.physics.startSystem(Phaser.Physics.P2JS);
     this.physMaterials = new PhysMaterials();
@@ -68,6 +70,11 @@ class Level01State extends Phaser.State
     this.guiGroup.add(this.visualText);
     this.visualText.setNewText('I want to take a little nap', 2000);
     this.visualText.vanishText(4000, 1000);
+
+    this.darkScreen = new Phaser.Sprite(game, 0, 0, 'darkScreen');
+    this.darkScreen.fixedToCamera = true;
+    this.guiGroup.add(this.darkScreen);
+    this.darkScreen.alpha = (GameCfg.itemsArray.length * 12)/100;
     /*
     var box = game.add.sprite(1000, 200, 'block');
     game.physics.p2.enable(box);
@@ -137,10 +144,12 @@ class Level01State extends Phaser.State
       this.layerBack_Parallax_03.x = (game.camera.x/10) * this.layerBack_Parallax_03.parallaxSpeed;
       this.layerBack_Parallax_03.y = (game.camera.y/10) * this.layerBack_Parallax_03.parallaxSpeed;
     }
+    this.map.update();
   }
 
   shutdown()
   {
+    this.soundController.kill();
     this.player.stopPlayer();
   }
 }

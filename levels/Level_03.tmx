@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="2017.07.25" orientation="orthogonal" renderorder="right-down" width="1" height="1" tilewidth="10000" tileheight="1300" nextobjectid="758">
+ <tileset firstgid="1" name="Decoretions" tilewidth="1026" tileheight="572" tilecount="132" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="3">
+   <image width="387" height="102" source="graphics/Dirt_01.png"/>
+  </tile>
+  <tile id="4">
+   <image width="408" height="135" source="graphics/Dirt_02.png"/>
+  </tile>
+  <tile id="5">
+   <image width="387" height="102" source="graphics/Dirt_03.png"/>
+  </tile>
+  <tile id="6">
+   <image width="455" height="139" source="graphics/DirtPurp_01.png"/>
+  </tile>
+  <tile id="7">
+   <image width="384" height="139" source="graphics/DirtPurp_02.png"/>
+  </tile>
+  <tile id="8">
+   <image width="188" height="292" source="graphics/Decor01.png"/>
+  </tile>
+  <tile id="9">
+   <image width="86" height="270" source="graphics/Decor02.png"/>
+  </tile>
+  <tile id="10">
+   <image width="86" height="270" source="graphics/Decor03.png"/>
+  </tile>
+  <tile id="11">
+   <image width="146" height="181" source="graphics/Decor04.png"/>
+  </tile>
+  <tile id="12">
+   <image width="93" height="188" source="graphics/Decor05.png"/>
+  </tile>
+  <tile id="13">
+   <image width="230" height="344" source="graphics/Rock_01.png"/>
+  </tile>
+  <tile id="14">
+   <image width="172" height="227" source="graphics/Rock_02.png"/>
+  </tile>
+  <tile id="15">
+   <image width="226" height="234" source="graphics/Rock_03.png"/>
+  </tile>
+  <tile id="16">
+   <image width="160" height="127" source="graphics/Rock_04.png"/>
+  </tile>
+  <tile id="17">
+   <image width="1024" height="156" source="graphics/Gress_01.png"/>
+  </tile>
+  <tile id="18">
+   <image width="560" height="258" source="graphics/Gress_02.png"/>
+  </tile>
+  <tile id="19">
+   <image width="557" height="409" source="graphics/Tree01.png"/>
+  </tile>
+  <tile id="20">
+   <image width="436" height="301" source="graphics/Tree02.png"/>
+  </tile>
+  <tile id="21">
+   <image width="653" height="432" source="graphics/Tree03.png"/>
+  </tile>
+  <tile id="22">
+   <image width="1026" height="94" source="graphics/Flare_01.png"/>
+  </tile>
+  <tile id="23">
+   <image width="741" height="87" source="graphics/Flare_02.png"/>
+  </tile>
+  <tile id="24">
+   <image width="974" height="101" source="graphics/Flare_03.png"/>
+  </tile>
+  <tile id="25">
+   <image width="407" height="388" source="graphics/bed.png"/>
+  </tile>
+  <tile id="26">
+   <image width="367" height="164" source="graphics/bed2.png"/>
+  </tile>
+  <tile id="27">
+   <image width="251" height="443" source="graphics/Cabinet.png"/>
+  </tile>
+  <tile id="28">
+   <image width="296" height="261" source="graphics/Commode.png"/>
+  </tile>
+  <tile id="29">
+   <image width="220" height="188" source="graphics/lamp1.png"/>
+  </tile>
+  <tile id="30">
+   <image width="561" height="486" source="graphics/Light1.png"/>
+  </tile>
+  <tile id="31">
+   <image width="226" height="337" source="graphics/mirror.png"/>
+  </tile>
+  <tile id="32">
+   <image width="668" height="141" source="graphics/carpet.png"/>
+  </tile>
+  <tile id="33">
+   <image width="251" height="281" source="graphics/bear_good.png"/>
+  </tile>
+  <tile id="34">
+   <image width="382" height="464" source="graphics/bear_evil.png"/>
+  </tile>
+  <tile id="35">
+   <image width="273" height="211" source="graphics/r_09.png"/>
+  </tile>
+  <tile id="36">
+   <image width="487" height="246" source="graphics/back_01.png"/>
+  </tile>
+  <tile id="37">
+   <image width="541" height="178" source="graphics/3back_08.png"/>
+  </tile>
+  <tile id="38">
+   <image width="524" height="194" source="graphics/3back_09.png"/>
+  </tile>
+  <tile id="39">
+   <image width="533" height="190" source="graphics/2back_05.png"/>
+  </tile>
+  <tile id="40">
+   <image width="310" height="170" source="graphics/2back_06.png"/>
+  </tile>
+  <tile id="41">
+   <image width="266" height="172" source="graphics/2back_07.png"/>
+  </tile>
+  <tile id="42">
+   <image width="301" height="196" source="graphics/3back_10.png"/>
+  </tile>
+  <tile id="43">
+   <image width="268" height="160" source="graphics/3back_11.png"/>
+  </tile>
+  <tile id="44">
+   <image width="274" height="160" source="graphics/back_02.png"/>
+  </tile>
+  <tile id="45">
+   <image width="314" height="174" source="graphics/back_03.png"/>
+  </tile>
+  <tile id="46">
+   <image width="316" height="164" source="graphics/back_04.png"/>
+  </tile>
+  <tile id="47">
+   <image width="747" height="141" source="graphics/Cloud_001.png"/>
+  </tile>
+  <tile id="48">
+   <image width="566" height="127" source="graphics/Cloud_002.png"/>
+  </tile>
+  <tile id="49">
+   <image width="77" height="183" source="graphics/kust_01.png"/>
+  </tile>
+  <tile id="50">
+   <image width="90" height="152" source="graphics/kust_02.png"/>
+  </tile>
+  <tile id="51">
+   <image width="87" height="193" source="graphics/kust_03.png"/>
+  </tile>
+  <tile id="52">
+   <image width="79" height="161" source="graphics/kust_04.png"/>
+  </tile>
+  <tile id="53">
+   <image width="115" height="90" source="graphics/kust1.png"/>
+  </tile>
+  <tile id="54">
+   <image width="124" height="75" source="graphics/kust2.png"/>
+  </tile>
+  <tile id="55">
+   <image width="86" height="79" source="graphics/kust3.png"/>
+  </tile>
+  <tile id="56">
+   <image width="124" height="84" source="graphics/kust4.png"/>
+  </tile>
+  <tile id="57">
+   <image width="311" height="269" source="graphics/most1.png"/>
+  </tile>
+  <tile id="58">
+   <image width="315" height="226" source="graphics/most2.png"/>
+  </tile>
+  <tile id="59">
+   <image width="251" height="207" source="graphics/most3.png"/>
+  </tile>
+  <tile id="60">
+   <image width="280" height="291" source="graphics/r_01.png"/>
+  </tile>
+  <tile id="61">
+   <image width="178" height="226" source="graphics/r_02.png"/>
+  </tile>
+  <tile id="62">
+   <image width="246" height="255" source="graphics/r_03.png"/>
+  </tile>
+  <tile id="63">
+   <image width="156" height="198" source="graphics/r_04.png"/>
+  </tile>
+  <tile id="64">
+   <image width="393" height="174" source="graphics/r_05.png"/>
+  </tile>
+  <tile id="65">
+   <image width="341" height="248" source="graphics/r_06.png"/>
+  </tile>
+  <tile id="66">
+   <image width="371" height="192" source="graphics/r_07.png"/>
+  </tile>
+  <tile id="67">
+   <image width="458" height="237" source="graphics/r_08.png"/>
+  </tile>
+  <tile id="68">
+   <image width="313" height="139" source="graphics/r_10.png"/>
+  </tile>
+  <tile id="69">
+   <image width="295" height="153" source="graphics/r_11.png"/>
+  </tile>
+  <tile id="70">
+   <image width="364" height="189" source="graphics/r_12.png"/>
+  </tile>
+  <tile id="71">
+   <image width="421" height="194" source="graphics/r_13.png"/>
+  </tile>
+  <tile id="72">
+   <image width="348" height="256" source="graphics/r_14.png"/>
+  </tile>
+  <tile id="73">
+   <image width="376" height="199" source="graphics/r_15.png"/>
+  </tile>
+  <tile id="74">
+   <image width="485" height="244" source="graphics/r_16.png"/>
+  </tile>
+  <tile id="75">
+   <image width="606" height="100" source="graphics/ground1.png"/>
+  </tile>
+  <tile id="76">
+   <image width="1010" height="147" source="graphics/ground2.png"/>
+  </tile>
+  <tile id="77">
+   <image width="665" height="192" source="graphics/ground3.png"/>
+  </tile>
+  <tile id="78">
+   <image width="901" height="459" source="graphics/Light2.png"/>
+  </tile>
+  <tile id="79">
+   <image width="504" height="287" source="graphics/rock_05.png"/>
+  </tile>
+  <tile id="80">
+   <image width="502" height="295" source="graphics/rock_06.png"/>
+  </tile>
+  <tile id="81">
+   <image width="586" height="355" source="graphics/rock_07.png"/>
+  </tile>
+  <tile id="82">
+   <image width="288" height="110" source="graphics/Gress_03.png"/>
+  </tile>
+  <tile id="83">
+   <image width="346" height="282" source="graphics/Gress_04.png"/>
+  </tile>
+  <tile id="84">
+   <image width="346" height="282" source="graphics/Gress_05.png"/>
+  </tile>
+  <tile id="85">
+   <image width="332" height="418" source="graphics/Gress_06.png"/>
+  </tile>
+  <tile id="86">
+   <image width="332" height="418" source="graphics/Gress_07.png"/>
+  </tile>
+  <tile id="87">
+   <image width="463" height="542" source="graphics/rock_08.png"/>
+  </tile>
+  <tile id="88">
+   <image width="513" height="572" source="graphics/rock_09.png"/>
+  </tile>
+  <tile id="89">
+   <image width="532" height="525" source="graphics/rock_10.png"/>
+  </tile>
+  <tile id="90">
+   <image width="338" height="333" source="graphics/Tree04.png"/>
+  </tile>
+  <tile id="91">
+   <image width="327" height="443" source="graphics/Tree05.png"/>
+  </tile>
+  <tile id="92">
+   <image width="308" height="319" source="graphics/Tree06.png"/>
+  </tile>
+  <tile id="93">
+   <image width="139" height="277" source="graphics/Tree07.png"/>
+  </tile>
+  <tile id="94">
+   <image width="139" height="277" source="graphics/Tree08.png"/>
+  </tile>
+  <tile id="95">
+   <image width="148" height="199" source="graphics/Tree09.png"/>
+  </tile>
+  <tile id="96">
+   <image width="167" height="323" source="graphics/Tree10.png"/>
+  </tile>
+  <tile id="97">
+   <image width="167" height="323" source="graphics/Tree11.png"/>
+  </tile>
+  <tile id="98">
+   <image width="487" height="246" source="graphics/darkblock_12.png"/>
+  </tile>
+  <tile id="99">
+   <image width="268" height="160" source="graphics/darkblock_11.png"/>
+  </tile>
+  <tile id="100">
+   <image width="274" height="160" source="graphics/darkblock_02.png"/>
+  </tile>
+  <tile id="101">
+   <image width="314" height="174" source="graphics/darkblock_03.png"/>
+  </tile>
+  <tile id="102">
+   <image width="316" height="164" source="graphics/darkblock_04.png"/>
+  </tile>
+  <tile id="103">
+   <image width="533" height="190" source="graphics/darkblock_05.png"/>
+  </tile>
+  <tile id="104">
+   <image width="310" height="170" source="graphics/darkblock_06.png"/>
+  </tile>
+  <tile id="105">
+   <image width="266" height="172" source="graphics/darkblock_07.png"/>
+  </tile>
+  <tile id="106">
+   <image width="541" height="178" source="graphics/darkblock_08.png"/>
+  </tile>
+  <tile id="107">
+   <image width="524" height="194" source="graphics/darkblock_09.png"/>
+  </tile>
+  <tile id="108">
+   <image width="301" height="196" source="graphics/darkblock_10.png"/>
+  </tile>
+  <tile id="109">
+   <image width="487" height="246" source="graphics/darkblock_01.png"/>
+  </tile>
+  <tile id="110">
+   <image width="342" height="315" source="graphics/tree12.png"/>
+  </tile>
+  <tile id="111">
+   <image width="291" height="370" source="graphics/tree14.png"/>
+  </tile>
+  <tile id="112">
+   <image width="308" height="319" source="graphics/tree15.png"/>
+  </tile>
+  <tile id="113">
+   <image width="307" height="319" source="graphics/tree16.png"/>
+  </tile>
+  <tile id="114">
+   <image width="338" height="333" source="graphics/tree17.png"/>
+  </tile>
+  <tile id="115">
+   <image width="200" height="540" source="graphics/Lipstick.png"/>
+  </tile>
+  <tile id="116">
+   <image width="188" height="292" source="graphics/badface01.png"/>
+  </tile>
+  <tile id="117">
+   <image width="387" height="233" source="graphics/eyes.png"/>
+  </tile>
+  <tile id="118">
+   <image width="207" height="182" source="graphics/eye3.png"/>
+  </tile>
+  <tile id="119">
+   <image width="207" height="182" source="graphics/eye2.png"/>
+  </tile>
+  <tile id="120">
+   <image width="207" height="182" source="graphics/eye.png"/>
+  </tile>
+  <tile id="121">
+   <image width="310" height="170" source="graphics/3lvl_2back_06.png"/>
+  </tile>
+  <tile id="122">
+   <image width="266" height="172" source="graphics/3lvl_2back_07.png"/>
+  </tile>
+  <tile id="123">
+   <image width="541" height="178" source="graphics/3lvl_3back_08.png"/>
+  </tile>
+  <tile id="124">
+   <image width="524" height="194" source="graphics/3lvl_3back_09.png"/>
+  </tile>
+  <tile id="125">
+   <image width="301" height="196" source="graphics/3lvl_3back_10.png"/>
+  </tile>
+  <tile id="126">
+   <image width="268" height="160" source="graphics/3lvl_3back_11.png"/>
+  </tile>
+  <tile id="127">
+   <image width="487" height="246" source="graphics/3lvl_back_01.png"/>
+  </tile>
+  <tile id="128">
+   <image width="274" height="160" source="graphics/3lvl_back_02.png"/>
+  </tile>
+  <tile id="129">
+   <image width="314" height="174" source="graphics/3lvl_back_03.png"/>
+  </tile>
+  <tile id="130">
+   <image width="316" height="164" source="graphics/3lvl_back_04.png"/>
+  </tile>
+  <tile id="131">
+   <image width="311" height="269" source="graphics/3lvl_most1.png"/>
+  </tile>
+  <tile id="132">
+   <image width="315" height="226" source="graphics/3lvl_most2.png"/>
+  </tile>
+  <tile id="133">
+   <image width="251" height="207" source="graphics/3lvl_most3.png"/>
+  </tile>
+  <tile id="134">
+   <image width="533" height="190" source="graphics/3lvl_2back_05.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="136" name="Decoretions" tilewidth="1026" tileheight="508" tilecount="72" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="3">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Dirt_01.png"/>
+  </tile>
+  <tile id="4">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Dirt_02.png"/>
+  </tile>
+  <tile id="5">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Dirt_03.png"/>
+  </tile>
+  <tile id="6">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/DirtPurp_01.png"/>
+  </tile>
+  <tile id="7">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/DirtPurp_02.png"/>
+  </tile>
+  <tile id="8">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Decor01.png"/>
+  </tile>
+  <tile id="9">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Decor02.png"/>
+  </tile>
+  <tile id="10">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Decor03.png"/>
+  </tile>
+  <tile id="11">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Decor04.png"/>
+  </tile>
+  <tile id="12">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Decor05.png"/>
+  </tile>
+  <tile id="13">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Rock_01.png"/>
+  </tile>
+  <tile id="14">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Rock_02.png"/>
+  </tile>
+  <tile id="15">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Rock_03.png"/>
+  </tile>
+  <tile id="16">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Rock_04.png"/>
+  </tile>
+  <tile id="17">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Gress_01.png"/>
+  </tile>
+  <tile id="18">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Gress_02.png"/>
+  </tile>
+  <tile id="19">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Tree01.png"/>
+  </tile>
+  <tile id="20">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Tree02.png"/>
+  </tile>
+  <tile id="21">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Tree03.png"/>
+  </tile>
+  <tile id="22">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Flare_01.png"/>
+  </tile>
+  <tile id="23">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Flare_02.png"/>
+  </tile>
+  <tile id="24">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Flare_03.png"/>
+  </tile>
+  <tile id="25">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/bed.png"/>
+  </tile>
+  <tile id="26">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/bed2.png"/>
+  </tile>
+  <tile id="27">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Cabinet.png"/>
+  </tile>
+  <tile id="28">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Commode.png"/>
+  </tile>
+  <tile id="29">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/lamp1.png"/>
+  </tile>
+  <tile id="30">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Light1.png"/>
+  </tile>
+  <tile id="31">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/mirror.png"/>
+  </tile>
+  <tile id="32">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/carpet.png"/>
+  </tile>
+  <tile id="33">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/bear_good.png"/>
+  </tile>
+  <tile id="34">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/bear_evil.png"/>
+  </tile>
+  <tile id="35">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_09.png"/>
+  </tile>
+  <tile id="36">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/back_01.png"/>
+  </tile>
+  <tile id="37">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/3back_08.png"/>
+  </tile>
+  <tile id="38">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/3back_09.png"/>
+  </tile>
+  <tile id="39">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/2back_05.png"/>
+  </tile>
+  <tile id="40">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/2back_06.png"/>
+  </tile>
+  <tile id="41">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/2back_07.png"/>
+  </tile>
+  <tile id="42">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/3back_10.png"/>
+  </tile>
+  <tile id="43">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/3back_11.png"/>
+  </tile>
+  <tile id="44">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/back_02.png"/>
+  </tile>
+  <tile id="45">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/back_03.png"/>
+  </tile>
+  <tile id="46">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/back_04.png"/>
+  </tile>
+  <tile id="47">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Cloud_001.png"/>
+  </tile>
+  <tile id="48">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/Cloud_002.png"/>
+  </tile>
+  <tile id="49">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/kust_01.png"/>
+  </tile>
+  <tile id="50">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/kust_02.png"/>
+  </tile>
+  <tile id="51">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/kust_03.png"/>
+  </tile>
+  <tile id="52">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/kust_04.png"/>
+  </tile>
+  <tile id="53">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/kust1.png"/>
+  </tile>
+  <tile id="54">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/kust2.png"/>
+  </tile>
+  <tile id="55">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/kust3.png"/>
+  </tile>
+  <tile id="56">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/kust4.png"/>
+  </tile>
+  <tile id="57">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/most1.png"/>
+  </tile>
+  <tile id="58">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/most2.png"/>
+  </tile>
+  <tile id="59">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/most3.png"/>
+  </tile>
+  <tile id="60">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_01.png"/>
+  </tile>
+  <tile id="61">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_02.png"/>
+  </tile>
+  <tile id="62">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_03.png"/>
+  </tile>
+  <tile id="63">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_04.png"/>
+  </tile>
+  <tile id="64">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_05.png"/>
+  </tile>
+  <tile id="65">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_06.png"/>
+  </tile>
+  <tile id="66">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_07.png"/>
+  </tile>
+  <tile id="67">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_08.png"/>
+  </tile>
+  <tile id="68">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_10.png"/>
+  </tile>
+  <tile id="69">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_11.png"/>
+  </tile>
+  <tile id="70">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_12.png"/>
+  </tile>
+  <tile id="71">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_13.png"/>
+  </tile>
+  <tile id="72">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_14.png"/>
+  </tile>
+  <tile id="73">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_15.png"/>
+  </tile>
+  <tile id="74">
+   <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_16.png"/>
+  </tile>
+ </tileset>
+ <objectgroup color="#000000" name="BackColor" locked="1">
+  <object id="663" x="205.692" y="967.394">
+   <properties>
+    <property name="color" type="color" value="#ff07392e"/>
+   </properties>
+   <polygon points="0,0 861.433,-24.2424 921.214,484.848 -51.6316,424.242"/>
+  </object>
+  <object id="664" x="1481.46" y="967.394">
+   <properties>
+    <property name="color" type="color" value="#ff1e665e"/>
+   </properties>
+   <polygon points="0,0 -563.636,-24.2424 -463.636,596.97 218.182,409.091"/>
+  </object>
+  <object id="666" x="952" y="749.334">
+   <properties>
+    <property name="color" type="color" value="#ff07392e"/>
+   </properties>
+   <polygon points="0,0 28,30.6667 68,40 128,37.3333 156,9.33333 188,-29.3333"/>
+  </object>
+  <object id="667" x="4020" y="956">
+   <properties>
+    <property name="color" type="color" value="#ff07392e"/>
+   </properties>
+   <polygon points="0,0 101.143,-128 648.504,-60 708,462.667 287.563,442.667"/>
+  </object>
+  <object id="669" x="4594.67" y="874.667">
+   <properties>
+    <property name="color" type="color" value="#ff1e665e"/>
+   </properties>
+   <polygon points="0,0 636,-84 1272,24 1728,-20 2120,80 2112,544 -120,508 -228,8"/>
+  </object>
+  <object id="670" x="4970.67" y="858.667">
+   <properties>
+    <property name="color" type="color" value="#ff429b93"/>
+   </properties>
+   <polygon points="0,0 220,-52 816,28 748,584 152,592"/>
+  </object>
+  <object id="671" x="6470.67" y="938.667">
+   <properties>
+    <property name="color" type="color" value="#ff07392e"/>
+   </properties>
+   <polygon points="0,0 200,524 3720,448 3764,60 2000,84 1648,-36 1144,-60 628,104 88,-8"/>
+  </object>
+  <object id="672" x="6272.28" y="521.523" rotation="-0.742075">
+   <properties>
+    <property name="color" type="color" value="#ff429b93"/>
+   </properties>
+   <polygon points="0,0 175.036,75.3061 234.059,81.412 443.695,79.3767 504.754,40.706 675.719,26.4589 746.955,50.8825 779.52,67.1649 879.249,63.0943 1035.97,-22.3883 514.931,-67.1649"/>
+  </object>
+  <object id="673" x="9476.67" y="630.667">
+   <properties>
+    <property name="color" type="color" value="#ff429b93"/>
+   </properties>
+   <polygon points="0,0 68,54 192,88 394,102 460,78 536,74 558,14 548,-62 88,-32"/>
+  </object>
+  <object id="674" x="9154.67" y="790.667">
+   <properties>
+    <property name="color" type="color" value="#ff429b93"/>
+   </properties>
+   <polygon points="0,0 32,48 140,58 180,40 226,-2 226,-46"/>
+  </object>
+  <object id="675" x="5916.67" y="382.667">
+   <properties>
+    <property name="color" type="color" value="#ff1e665e"/>
+   </properties>
+   <polygon points="0,0 22,38 94,54 160,52 214,-4 44,-28"/>
+  </object>
+  <object id="676" x="5528.67" y="492.667">
+   <properties>
+    <property name="color" type="color" value="#ff429b93"/>
+   </properties>
+   <polygon points="0,0 34,30 158,40 200,18 214,-32 94,-52"/>
+  </object>
+  <object id="677" x="4472.67" y="562.667">
+   <properties>
+    <property name="color" type="color" value="#ff429b93"/>
+   </properties>
+   <polygon points="0,0 22,28 134,32 194,-6 202,-38 86,-58"/>
+  </object>
+  <object id="678" x="4162.67" y="458.667">
+   <properties>
+    <property name="color" type="color" value="#ff07392e"/>
+   </properties>
+   <polygon points="0,0 22,32 128,42 184,16 214,-40 86,-40"/>
+  </object>
+  <object id="679" x="3322.67" y="402.667">
+   <properties>
+    <property name="color" type="color" value="#ff07392e"/>
+   </properties>
+   <polygon points="0,0 26,28 72,56 224,84 446,50 500,64 562,46 616,-8 246,-44"/>
+  </object>
+  <object id="680" x="2938.67" y="358.667">
+   <properties>
+    <property name="color" type="color" value="#ff07392e"/>
+   </properties>
+   <polygon points="0,0 32,50 134,74 184,46 220,28 236,-22"/>
+  </object>
+  <object id="681" x="2278.67" y="1248.67">
+   <properties>
+    <property name="color" type="color" value="#ff312a3d"/>
+   </properties>
+   <polygon points="0,0 168,-74 648,-78 658,158 62,168"/>
+  </object>
+  <object id="682" x="3326.67" y="1160.67">
+   <properties>
+    <property name="color" type="color" value="#ff312a3d"/>
+   </properties>
+   <polygon points="0,0 -34,224 1002,202 902,-50"/>
+  </object>
+  <object id="683" x="2824.67" y="1194.67">
+   <properties>
+    <property name="color" type="color" value="#ff412424"/>
+   </properties>
+   <polygon points="0,0 76,204 526,202 544,-34 60,-48"/>
+  </object>
+  <object id="740" x="1432" y="968">
+   <properties>
+    <property name="color" type="color" value="#ff429b93"/>
+   </properties>
+   <polygon points="0,0 434,-84 528,382 136,444"/>
+  </object>
+  <object id="741" x="1866" y="1364">
+   <properties>
+    <property name="color" type="color" value="#ff312a3d"/>
+   </properties>
+   <polygon points="0,0 -26,-458 494,-168 486,52"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="Back_Parallax_03" locked="1">
+  <properties>
+   <property name="speed" type="float" value="0.8"/>
+  </properties>
+ </objectgroup>
+ <objectgroup name="Back_Parallax_02" locked="1">
+  <properties>
+   <property name="speed" type="float" value="0.8"/>
+  </properties>
+ </objectgroup>
+ <objectgroup name="Back_Parallax_01" locked="1">
+  <properties>
+   <property name="speed" type="int" value="1"/>
+  </properties>
+  <object id="582" gid="117" x="2435.38" y="720.081" width="227.394" height="349.576" rotation="-0.688645"/>
+  <object id="586" gid="35" x="3400.37" y="1149.82" width="264.902" height="321.766"/>
+  <object id="606" gid="22" x="7646" y="1070" width="737" height="488"/>
+  <object id="607" gid="20" x="8494" y="1086" width="557" height="409"/>
+ </objectgroup>
+ <objectgroup name="Back_04" locked="1">
+  <object id="635" gid="78" x="55.8788" y="983.879" width="665" height="192"/>
+  <object id="636" gid="77" x="704.091" y="985.121" width="1010" height="147"/>
+  <object id="649" gid="77" x="2370.33" y="1295" width="1319.33" height="280.022"/>
+  <object id="650" gid="98" x="5055" y="515" width="167" height="323"/>
+  <object id="651" gid="96" x="5270" y="559" width="148" height="199"/>
+  <object id="652" gid="95" x="5525" y="420" width="139" height="277"/>
+  <object id="653" gid="97" x="5991" y="873" width="123" height="251"/>
+  <object id="654" gid="73" x="7295.53" y="907.061" width="348" height="256" rotation="9.34107"/>
+  <object id="656" gid="72" x="7004" y="1037" width="421" height="194"/>
+  <object id="657" gid="74" x="6408.76" y="945.368" width="376" height="199" rotation="12.6627"/>
+  <object id="658" gid="72" x="8415.32" y="1034.89" width="421" height="194" rotation="11.0416"/>
+  <object id="660" gid="73" x="8110.67" y="856.88" width="348" height="256" rotation="-319.115"/>
+  <object id="661" gid="75" x="9674" y="1068" width="485" height="244"/>
+  <object id="662" gid="72" x="9282.42" y="1067" width="364.577" height="168"/>
+  <object id="730" gid="81" x="2118.51" y="502.221" width="683.835" height="401.855" rotation="-236.306"/>
+  <object id="731" gid="50" x="3399" y="361" width="77" height="183"/>
+  <object id="733" gid="51" x="3324" y="402" width="90" height="152"/>
+ </objectgroup>
+ <objectgroup name="Back_03" locked="1">
+  <object id="542" gid="124" x="4072" y="933" width="541" height="178"/>
+  <object id="543" gid="135" x="4470" y="953" width="533" height="190"/>
+  <object id="545" gid="122" x="4325" y="977" width="310" height="170"/>
+  <object id="546" gid="129" x="4866.05" y="946.285" width="274" height="160" rotation="-12.761"/>
+  <object id="547" gid="128" x="5359" y="961" width="487" height="246"/>
+  <object id="548" gid="128" x="5067.19" y="1008.99" width="487" height="246" rotation="-21.5478"/>
+  <object id="549" gid="132" x="4670.73" y="892.277" width="311" height="269" rotation="-6.31042"/>
+  <object id="550" gid="133" x="4901.87" y="819.116" width="315" height="226" rotation="-39.2026"/>
+  <object id="551" gid="133" x="4990.17" y="733.278" width="315" height="226" rotation="-12.8858"/>
+  <object id="552" gid="132" x="5180.25" y="553.05" width="311" height="269" rotation="-289.254"/>
+  <object id="553" gid="129" x="5113.08" y="615.7" width="274" height="141.609" rotation="16.6777"/>
+  <object id="554" gid="131" x="5336" y="812" width="316" height="164"/>
+  <object id="555" gid="129" x="4428.09" y="607.636" width="274" height="160"/>
+  <object id="556" gid="127" x="4122" y="506" width="268" height="160"/>
+  <object id="558" gid="127" x="3706" y="454" width="268" height="160"/>
+  <object id="559" gid="125" x="3290" y="473" width="524" height="194"/>
+  <object id="560" gid="127" x="2918" y="426" width="268" height="160"/>
+  <object id="561" gid="132" x="9692.87" y="588.345" width="311" height="269" rotation="46.5095"/>
+  <object id="562" gid="132" x="9554.75" y="593.252" width="311" height="269" rotation="49.3866"/>
+  <object id="563" gid="130" x="9446.03" y="699.121" width="314" height="174"/>
+  <object id="564" gid="129" x="9126.64" y="849.697" width="274" height="160"/>
+  <object id="576" gid="128" x="5147.48" y="1053.24" width="487" height="246" rotation="-14.6299"/>
+  <object id="577" gid="123" x="5754.88" y="982.97" width="266" height="172"/>
+  <object id="578" gid="135" x="5952.18" y="970.758" width="533" height="190"/>
+  <object id="579" gid="127" x="6306.28" y="959.509" width="268" height="160" rotation="16.6329"/>
+  <object id="580" gid="127" x="6962.97" y="1125.45" width="268" height="160"/>
+  <object id="581" gid="125" x="6505.7" y="996.312" width="524" height="194" rotation="17.9644"/>
+  <object id="611" gid="10" x="1450.94" y="947.121" width="86" height="270"/>
+  <object id="613" gid="11" x="1390.17" y="990.978" width="86" height="270" rotation="-7.51132"/>
+  <object id="614" gid="13" x="3299.45" y="1169.76" width="93" height="188"/>
+  <object id="615" gid="12" x="3111.85" y="1132.42" width="146" height="181"/>
+  <object id="616" gid="11" x="3020.64" y="1168.33" width="86" height="270"/>
+  <object id="617" gid="10" x="2963.74" y="1211.78" width="86" height="270" rotation="-6.61241"/>
+  <object id="618" gid="9" x="5809.03" y="864.182" width="188" height="292"/>
+  <object id="625" gid="53" x="242.818" y="958.788" width="79" height="161"/>
+  <object id="626" gid="52" x="320.636" y="935.394" width="87" height="193"/>
+  <object id="638" gid="10" x="1484.65" y="982.516" width="86" height="270" rotation="7.74748"/>
+ </objectgroup>
+ <objectgroup name="Back_02" locked="1">
+  <object id="522" gid="124" x="-239.697" y="1052.64" width="541" height="178"/>
+  <object id="523" gid="124" x="78.4848" y="1052.64" width="541" height="178"/>
+  <object id="524" gid="125" x="434.97" y="1063.67" width="524" height="194"/>
+  <object id="525" gid="135" x="970.364" y="1052.58" width="533" height="190"/>
+  <object id="526" gid="127" x="820.545" y="1043.64" width="268" height="160"/>
+  <object id="527" gid="127" x="908.424" y="792.121" width="268" height="160"/>
+  <object id="528" gid="128" x="1480.82" y="1143.66" width="487" height="246" rotation="-26.7429"/>
+  <object id="529" gid="7" x="2397.24" y="1253.85" width="455" height="139"/>
+  <object id="530" gid="4" x="2847.12" y="1217.67" width="387" height="102"/>
+  <object id="531" gid="6" x="2629.3" y="1220.33" width="387" height="102"/>
+  <object id="532" gid="4" x="3105" y="1221" width="387" height="102"/>
+  <object id="533" gid="7" x="3331" y="1245" width="455" height="139"/>
+  <object id="534" gid="6" x="3167" y="1217" width="387" height="102"/>
+  <object id="535" gid="90" x="2139.77" y="509.086" width="652" height="707" rotation="-244.182"/>
+  <object id="536" gid="16" x="2222.85" y="868.897" width="348" height="408" rotation="-479.447"/>
+  <object id="537" gid="82" x="1983" y="911" width="676" height="401"/>
+  <object id="540" gid="17" x="1744" y="985" width="218" height="173"/>
+  <object id="541" gid="81" x="3463" y="1279" width="770" height="505"/>
+  <object id="565" gid="124" x="8707.26" y="1120.17" width="541" height="178"/>
+  <object id="566" gid="125" x="9063.74" y="1131.2" width="524" height="194"/>
+  <object id="567" gid="124" x="8389.08" y="1120.17" width="541" height="178"/>
+  <object id="568" gid="127" x="9449.32" y="1111.17" width="268" height="160"/>
+  <object id="569" gid="135" x="9599.14" y="1120.11" width="533" height="190"/>
+  <object id="570" gid="135" x="7999.89" y="940.793" width="533" height="190" rotation="23.0204"/>
+  <object id="571" gid="127" x="7871.7" y="937.22" width="268" height="160" rotation="7.64475"/>
+  <object id="572" gid="125" x="7477.39" y="972.758" width="524" height="194"/>
+  <object id="573" gid="125" x="7166.42" y="1110.62" width="524" height="194" rotation="-15.159"/>
+  <object id="574" gid="135" x="7752.05" y="990.701" width="533" height="190" rotation="6.66467"/>
+  <object id="575" gid="123" x="7641.79" y="958.958" width="266" height="172" rotation="21.3471"/>
+  <object id="587" gid="80" x="1587.86" y="-169.36" width="945.497" height="635.69" rotation="-184.428"/>
+  <object id="588" gid="81" x="-45.3549" y="-81.1185" width="965.999" height="576.089" rotation="110.925"/>
+  <object id="597" gid="129" x="6347.9" y="607.067" width="274" height="160"/>
+  <object id="598" gid="131" x="7050.04" y="595.461" width="316" height="164" rotation="-17.6155"/>
+  <object id="599" gid="130" x="6227.9" y="592.855" width="314" height="174"/>
+  <object id="600" gid="128" x="6437.69" y="656.025" width="487" height="246" rotation="-19.0152"/>
+  <object id="601" gid="129" x="6938.81" y="588.885" width="274" height="160"/>
+  <object id="602" gid="128" x="6741.39" y="638.556" width="487" height="246" rotation="-18.321"/>
+  <object id="603" gid="129" x="5496.33" y="549.697" width="274" height="160"/>
+  <object id="605" gid="123" x="5865.65" y="409.853" width="266" height="172" rotation="13.6143"/>
+ </objectgroup>
+ <objectgroup name="Back_01" locked="1">
+  <object id="608" gid="26" x="9553" y="654" width="407" height="388"/>
+  <object id="639" gid="118" x="7552.64" y="1070.61" width="387" height="233"/>
+  <object id="640" gid="119" x="6281.85" y="1009.18" width="149.424" height="124.424"/>
+  <object id="646" gid="119" x="945.485" y="1035.42" width="140.333" height="123.385"/>
+  <object id="647" gid="121" x="1089.62" y="1017.74" width="68.2628" height="60.0185" rotation="-13.5191"/>
+ </objectgroup>
+ <objectgroup name="Front_03" locked="1">
+  <object id="620" gid="17" x="6985.67" y="1044.06" width="160" height="127"/>
+  <object id="622" gid="112" x="6318.64" y="515.303" width="291" height="370"/>
+  <object id="645" gid="114" x="4095.53" y="970.148" width="307" height="319" rotation="-19.1023"/>
+ </objectgroup>
+ <objectgroup name="Front_02" locked="1"/>
+ <objectgroup name="Front_01" locked="1"/>
+ <objectgroup name="Front_Parallax_03" locked="1">
+  <properties>
+   <property name="speed" type="float" value="-0.7"/>
+  </properties>
+  <object id="609" gid="27" x="10222.9" y="598.667" width="367" height="164"/>
+ </objectgroup>
+ <objectgroup name="Front_Parallax_02" locked="1">
+  <properties>
+   <property name="speed" type="float" value="-0.7"/>
+  </properties>
+  <object id="630" gid="49" x="156.394" y="375.121" width="566" height="127"/>
+  <object id="632" gid="49" x="2756.39" y="472.091" width="566" height="127"/>
+ </objectgroup>
+ <objectgroup name="Front_Parallax_01" locked="1">
+  <properties>
+   <property name="speed" type="int" value="1"/>
+  </properties>
+  <object id="628" gid="48" x="-163.909" y="542.727" width="747" height="141"/>
+  <object id="629" gid="48" x="1860.33" y="221.515" width="747" height="141"/>
+  <object id="634" gid="48" x="3002.76" y="539.697" width="747" height="141"/>
+ </objectgroup>
+ <objectgroup name="Entity">
+  <object id="727" type="Player" x="358.03" y="859.197">
+   <properties>
+    <property name="armored" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="742" name="Enemy_Spider" type="MonsterSpawner" x="3004.64" y="1094.24"/>
+  <object id="743" name="Enemy_Spider" type="MonsterSpawner" x="8620" y="916"/>
+  <object id="744" name="Enemy_Flyer" type="MonsterSpawner" x="7936" y="234"/>
+  <object id="745" name="Enemy_Flyer" type="MonsterSpawner" x="4652" y="156"/>
+  <object id="746" name="Enemy_Tumbler" type="MonsterSpawner" x="1742.42" y="806.061"/>
+  <object id="747" name="Enemy_Tumbler" type="MonsterSpawner" x="2152" y="496"/>
+  <object id="748" name="Enemy_Spider" type="MonsterSpawner" x="6254.12" y="768.848"/>
+  <object id="749" name="Enemy_Spider" type="MonsterSpawner" x="9415.15" y="451.514"/>
+  <object id="750" name="Enemy_Tumbler" type="MonsterSpawner" x="5001.45" y="510.727"/>
+  <object id="751" name="Enemy_Spider" type="MonsterSpawner" x="11272.7" y="330.302"/>
+  <object id="752" name="Enemy_Tumbler" type="MonsterSpawner" x="7103.03" y="351.515"/>
+  <object id="753" name="item_4" type="ItemObject" x="7503.76" y="368.848"/>
+  <object id="754" name="item_5" type="ItemObject" x="3003.33" y="176"/>
+  <object id="757" name="LevelFinalState" type="TriggerPlace_Win" x="9711.33" y="77.9998" width="212" height="398.667"/>
+ </objectgroup>
+ <objectgroup name="Collision" locked="1">
+  <object id="684" x="-21.2121" y="684.848">
+   <polygon points="0,0 290.909,-109.091 212.121,272.727 -57.5758,336.364"/>
+  </object>
+  <object id="685" x="151.515" y="924.242">
+   <polygon points="0,0 781.818,24.2424 803.03,181.818 -136.364,160.606"/>
+  </object>
+  <object id="686" x="820" y="950">
+   <polygon points="0,0 674,-14 726,132"/>
+  </object>
+  <object id="687" x="1380" y="948">
+   <polygon points="0,0 558,-96 626,84 50,170"/>
+  </object>
+  <object id="688" x="938" y="676">
+   <polygon points="0,0 224,-6 208,62 104,114 8,74"/>
+  </object>
+  <object id="690" x="2040" y="672">
+   <polygon points="0,0 0,-88 64,-138 334,-112 310,536 6,514"/>
+  </object>
+  <object id="691" x="2324" y="554">
+   <polygon points="0,0 204,34 190,68 -4,30"/>
+  </object>
+  <object id="692" x="2340" y="752">
+   <polygon points="0,0 220,20 288,72 -28,118"/>
+  </object>
+  <object id="693" x="2336" y="1116">
+   <polygon points="0,0 156,-78 208,-70 198,164 -10,158"/>
+  </object>
+  <object id="694" x="2510" y="1142">
+   <polygon points="0,0 1136,-4 1142,172 -12,214"/>
+  </object>
+  <object id="696" x="3494" y="980">
+   <polygon points="0,0 226,-46 510,174"/>
+  </object>
+  <object id="697" x="3626" y="908">
+   <polygon points="0,0 108,-4 132,376 4,372"/>
+  </object>
+  <object id="700" x="3858" y="1062">
+   <polygon points="0,0 124,-118 288,88 78,178"/>
+  </object>
+  <object id="701" x="3860" y="808">
+   <polygon points="0,0 582,-10 682,214 106,216"/>
+  </object>
+  <object id="702" x="4394" y="796">
+   <polygon points="0,0 340,24 294,222 4,168"/>
+  </object>
+  <object id="710" x="5768" y="884">
+   <polygon points="0,0 500,-40 1582,214 1486,364 -94,264"/>
+  </object>
+  <object id="711" x="6986" y="1044">
+   <polygon points="0,0 682,-192 1108,-204 1606,46 1546,124 128,130"/>
+  </object>
+  <object id="712" x="8382" y="1008">
+   <polygon points="0,0 1702,-12 1694,128 -56,126"/>
+  </object>
+  <object id="714" x="9468" y="602">
+   <polygon points="0,0 614,-32 548,104 394,130 196,110 72,78"/>
+  </object>
+  <object id="715" x="9634" y="604">
+   <polygon points="0,0 2,-112 268,-134 312,-4"/>
+  </object>
+  <object id="716" x="9156" y="722">
+   <polygon points="0,0 228,16 216,74 112,122 12,92"/>
+  </object>
+  <object id="718" x="5916" y="320">
+   <polygon points="0,0 224,20 152,112 22,104 -10,44"/>
+  </object>
+  <object id="719" x="5520" y="428">
+   <polygon points="0,0 230,6 198,78 150,98 36,88 0,52"/>
+  </object>
+  <object id="720" x="4458" y="484">
+   <polygon points="0,0 216,10 204,66 136,106 46,106 2,58"/>
+  </object>
+  <object id="721" x="4158" y="396">
+   <polygon points="0,0 220,-6 182,86 30,92 -8,44"/>
+  </object>
+  <object id="722" x="3332" y="358">
+   <polygon points="0,0 288,-24 626,-16 550,94 216,122 30,86"/>
+  </object>
+  <object id="723" x="2950" y="322">
+   <polygon points="0,0 230,-12 196,70 110,106 14,74"/>
+  </object>
+  <object id="725" x="6248" y="492">
+   <polygon points="0,0 478,-96 798,-40 442,114 194,108"/>
+  </object>
+  <object id="726" x="7020" y="398">
+   <polygon points="0,0 288,60 124,184 22,182 -260,122 -290,-2"/>
+  </object>
+  <object id="729" x="1821.33" y="885.333">
+   <polygon points="0,0 158.667,-242.667 241.333,-310.667 298.667,240"/>
+  </object>
+  <object id="737" x="4649.33" y="829.333">
+   <polygon points="0,0 146.667,-142.667 380,-276 569.333,-276 965.333,-60 1086.67,244 76,254.667"/>
+  </object>
+  <object id="739" x="5610" y="770">
+   <polygon points="0,0 252,153 217,264 -50,261"/>
+  </object>
+  <object id="755" x="9900" y="124">
+   <polygon points="0,0 132,0 136,459 0,464"/>
+  </object>
+ </objectgroup>
+</map>

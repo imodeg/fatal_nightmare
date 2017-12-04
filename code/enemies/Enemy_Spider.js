@@ -5,20 +5,19 @@ class Enemy_Spider extends Phaser.Sprite
     super(game, x, y, '');
     this.levelState = levelState;
 
-    this.health = 20;
+    this.health = 15;
     this.alive = true;
 
     game.physics.p2.enable(this, GameCfg.isDebug);
     this.body.clearShapes();
 
-    this.bottomContactShape = this.body.addCircle(20, 0, -16, 0); //bottom floor collide shape
+    this.bottomContactShape = this.body.addCircle(94, 0, -74, 0); //bottom floor collide shape
     this.body.setMaterial(this.levelState.physMaterials.floorContactMaterial, this.bottomContactShape);
 
-    this.mainBodyShape = this.body.addRectangle(140, 150, 0, -90, 0); //main body shape
-    this.body.setMaterial(this.levelState.physMaterials.mainBodyMaterial, this.mainBodyShape);
+    //this.mainBodyShape = this.body.addRectangle(140, 150, 0, -90, 0); //main body shape
+    //this.body.setMaterial(this.levelState.physMaterials.mainBodyMaterial, this.mainBodyShape);
     this.body.entityType = 'Enemy_Spider';
 
-    console.log(this.mainBodyShape);
     this.kickContactShape = this.body.addCircle(15, 0, -60, 0);
     this.kickContactShape.sensor = true;
     this.body.setMaterial(this.levelState.physMaterials.kickMaterial, this.kickContactShape);

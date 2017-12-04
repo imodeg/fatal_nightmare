@@ -22,10 +22,10 @@ class Enemy_FlyerStateBase
 
   clearHitShape()
   {
-      this.monster.kickContactShape.position[0] = 0;
-      this.monster.kickContactShape.position[1] = 3.5;
-      this.monster.kickContactShape.radius = 0.5;
-      this.monster.body.shapeChanged();
+      //this.monster.kickContactShape.position[0] = 0;
+      //this.monster.kickContactShape.position[1] = 3.5;
+      //this.monster.kickContactShape.radius = 0.5;
+      //this.monster.body.shapeChanged();
   }
 }
 
@@ -66,7 +66,6 @@ class Enemy_FlyerStateRun extends Enemy_FlyerStateBase
 
   start()
   {
-    this.clearHitShape();
     this.monster.displayObject.state.setAnimation(0, 'idle_fly', true);
     if(this.monster.levelState.player.body.x > this.monster.body.x)
     {
@@ -169,7 +168,6 @@ class Enemy_FlyerStateKick extends Enemy_FlyerStateBase
 
   clear()
   {
-    this.clearHitShape();
     game.time.events.remove(this.timer);
     game.time.events.remove(this.timerSetIdle);
   }
@@ -215,6 +213,7 @@ class Enemy_FlyerStateDeath extends Enemy_FlyerStateBase
 
   start()
   {
+    this.monster.levelState.soundController.monsterDeath.play();
     this.monster.displayObject.state.setAnimation(0, 'death', false);
     this.timer = game.time.events.add(200,
       () =>

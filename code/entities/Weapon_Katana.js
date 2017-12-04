@@ -21,6 +21,13 @@ class Weapon_Katana extends Phaser.Sprite
     if(this.isIntresected && this.isActive)
     {
       this.isActive = false;
+
+      game.time.events.add(900,
+        () =>
+        {
+          this.levelState.soundController.playerTakeWeapon.play();
+
+        }, this);
       game.time.events.add(1200,
         () =>
         {

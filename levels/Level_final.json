@@ -1,15 +1,6 @@
 { "height":1,
  "layers":[
         {
-         "image":"levelFijnBack.png",
-         "name":"Image Layer 1",
-         "opacity":1,
-         "type":"imagelayer",
-         "visible":true,
-         "x":0,
-         "y":0
-        }, 
-        {
          "color":"#000000",
          "draworder":"topdown",
          "name":"BackColor",
@@ -2794,19 +2785,8 @@
                  "type":"Player",
                  "visible":true,
                  "width":0,
-                 "x":348.442121212121,
-                 "y":433.995757575758
-                }, 
-                {
-                 "height":0,
-                 "id":555,
-                 "name":"",
-                 "rotation":0,
-                 "type":"Enemy_Spider",
-                 "visible":true,
-                 "width":0,
-                 "x":4195.23,
-                 "y":1356.67
+                 "x":343.775,
+                 "y":432.662
                 }, 
                 {
                  "height":0,
@@ -2816,8 +2796,118 @@
                  "type":"ItemObject",
                  "visible":true,
                  "width":0,
-                 "x":1226,
-                 "y":1139.33333333333
+                 "x":1243.33,
+                 "y":1146.67
+                }, 
+                {
+                 "height":811.152,
+                 "id":559,
+                 "name":"",
+                 "rotation":0,
+                 "type":"TriggerPlace_Finale",
+                 "visible":true,
+                 "width":264.848,
+                 "x":2127.33,
+                 "y":2783.09
+                }, 
+                {
+                 "height":0,
+                 "id":561,
+                 "name":"",
+                 "rotation":0,
+                 "type":"Enemy_Cat",
+                 "visible":true,
+                 "width":0,
+                 "x":2623.67,
+                 "y":3411
+                }, 
+                {
+                 "height":0,
+                 "id":566,
+                 "name":"Enemy_Spider",
+                 "rotation":0,
+                 "type":"MonsterSpawner",
+                 "visible":true,
+                 "width":0,
+                 "x":1667.23,
+                 "y":804.003
+                }, 
+                {
+                 "height":0,
+                 "id":569,
+                 "name":"Enemy_Spider",
+                 "rotation":0,
+                 "type":"MonsterSpawner",
+                 "visible":true,
+                 "width":0,
+                 "x":4169.33,
+                 "y":1360
+                }, 
+                {
+                 "height":0,
+                 "id":570,
+                 "name":"Enemy_Spider",
+                 "rotation":0,
+                 "type":"MonsterSpawner",
+                 "visible":true,
+                 "width":0,
+                 "x":2332,
+                 "y":2002
+                }, 
+                {
+                 "height":0,
+                 "id":571,
+                 "name":"Enemy_Flyer",
+                 "rotation":0,
+                 "type":"MonsterSpawner",
+                 "visible":true,
+                 "width":0,
+                 "x":1368,
+                 "y":1504
+                }, 
+                {
+                 "height":0,
+                 "id":572,
+                 "name":"Enemy_Flyer",
+                 "rotation":0,
+                 "type":"MonsterSpawner",
+                 "visible":true,
+                 "width":0,
+                 "x":3824.24,
+                 "y":412.121
+                }, 
+                {
+                 "height":0,
+                 "id":573,
+                 "name":"Enemy_Spider",
+                 "rotation":0,
+                 "type":"MonsterSpawner",
+                 "visible":true,
+                 "width":0,
+                 "x":2740,
+                 "y":429.333
+                }, 
+                {
+                 "height":0,
+                 "id":574,
+                 "name":"item_7",
+                 "rotation":0,
+                 "type":"ItemObject",
+                 "visible":true,
+                 "width":0,
+                 "x":2216,
+                 "y":1924
+                }, 
+                {
+                 "height":0,
+                 "id":575,
+                 "name":"item_8",
+                 "rotation":0,
+                 "type":"ItemObject",
+                 "visible":true,
+                 "width":0,
+                 "x":1443.0303030303,
+                 "y":141.939393939394
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4355,7 +4445,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":558,
+ "nextobjectid":576,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"2017.07.25",

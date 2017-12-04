@@ -1,15 +1,6 @@
 { "height":1,
  "layers":[
         {
-         "image":"levelBack.png",
-         "name":"Image Layer 1",
-         "opacity":1,
-         "type":"imagelayer",
-         "visible":true,
-         "x":0,
-         "y":0
-        }, 
-        {
          "color":"#000000",
          "draworder":"topdown",
          "name":"BackColor",
@@ -1450,8 +1441,8 @@
                  "type":"Player",
                  "visible":true,
                  "width":0,
-                 "x":2926.04545454545,
-                 "y":4456.08242424243
+                 "x":2924.54545454545,
+                 "y":4465.33242424243
                 }, 
                 {
                  "height":0,
@@ -1489,13 +1480,79 @@
                 {
                  "height":398.667,
                  "id":268,
-                 "name":"LevelFinalState",
+                 "name":"Level03State",
                  "rotation":0,
                  "type":"TriggerPlace_Win",
                  "visible":true,
                  "width":212,
                  "x":2982,
                  "y":1323.99983333333
+                }, 
+                {
+                 "height":0,
+                 "id":286,
+                 "name":"item_3",
+                 "rotation":0,
+                 "type":"ItemObject",
+                 "visible":true,
+                 "width":0,
+                 "x":628.67,
+                 "y":1820.99666666667
+                }, 
+                {
+                 "height":0,
+                 "id":294,
+                 "name":"Enemy_Tumbler",
+                 "rotation":0,
+                 "type":"MonsterSpawner",
+                 "visible":true,
+                 "width":0,
+                 "x":1374.66666666667,
+                 "y":2666.66666666667
+                }, 
+                {
+                 "height":0,
+                 "id":295,
+                 "name":"Enemy_Tumbler",
+                 "rotation":0,
+                 "type":"MonsterSpawner",
+                 "visible":true,
+                 "width":0,
+                 "x":1520,
+                 "y":2202.66666666667
+                }, 
+                {
+                 "height":274,
+                 "id":297,
+                 "name":"",
+                 "rotation":0,
+                 "type":"TriggerPlace_Kill",
+                 "visible":true,
+                 "width":582,
+                 "x":3294,
+                 "y":4660
+                }, 
+                {
+                 "height":274,
+                 "id":298,
+                 "name":"",
+                 "rotation":0,
+                 "type":"TriggerPlace_Kill",
+                 "visible":true,
+                 "width":582,
+                 "x":-206.060606060606,
+                 "y":4442.42424242424
+                }, 
+                {
+                 "height":0,
+                 "id":299,
+                 "name":"Enemy_Spider",
+                 "rotation":0,
+                 "type":"MonsterSpawner",
+                 "visible":true,
+                 "width":0,
+                 "x":2466,
+                 "y":1494
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2609,11 +2666,11 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":284,
+ "nextobjectid":300,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"2017.07.25",
- "tileheight":5000,
+ "tileheight":5300,
  "tilesets":[
         {
          "columns":0,
@@ -3523,7 +3580,7 @@
             },
          "tilewidth":1026
         }],
- "tilewidth":3560,
+ "tilewidth":3860,
  "type":"map",
  "version":1,
  "width":1

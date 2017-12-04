@@ -36,6 +36,8 @@ class ItemObject extends Phaser.Sprite
     this.isIntresected = Phaser.Rectangle.intersects(this.getBounds(), this.player.displayObject.getBounds());
     if(this.isIntresected && this.isActive)
     {
+      game.add.tween(this.levelState.darkScreen).to( { alpha: this.levelState.darkScreen.alpha+0.12 }, 300, Phaser.Easing.Sinusoidal.InOut, true);
+      this.levelState.soundController.takeItem.play();
       this.isActive = false;
       //this.kill();
       this.levelState.gui_ItemsBar.addItem(this.position, this.itemName);

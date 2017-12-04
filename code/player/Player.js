@@ -75,6 +75,7 @@ class Player extends Phaser.Sprite
     this.playerState_Jump = new PlayerStateJump(this);
     this.playerState_Fall = new PlayerStateFall(this);
     this.playerState_Hit = new PlayerStateHit(this);
+    this.playerState_HitStatic = new PlayerStateHitStatic(this);
     this.playerState_Death = new PlayerStateDeath(this);
 
     this.playerState_KickWeapon_01 = new PlayerStateKickWeapon_01(this);
@@ -87,9 +88,58 @@ class Player extends Phaser.Sprite
 
     this.body.onBeginContact.add(this.contactStart, this);
     this.body.onEndContact.add(this.contactEnd, this);
+
+    this.ghostMonster = new Phaser.Sprite(game, 200, 100, 'EnemyGhost');
+    this.ghostMonster.scale.setTo(-1,1);
+    this.ghostMonster.anchor.setTo(0.5,0.7);
+    this.ghostMonster.alpha = 0;
+    this.ghostActive = true;
+    this.addChild(this.ghostMonster);
+    //this.ghostStart();
   }
 
 
+  ghostStart()
+  {
+    this.ghostMonster.alpha = 0;
+    if(this.dirrection == 'right')
+    {
+      this.ghostMonster.position.setTo(-300, 100);
+      this.ghostMonster.scale.setTo(1,1);
+      game.add.tween(this.ghostMonster.scale).to( { x: 1.1, y: 1.1 }, 1000, Phaser.Easing.Cubic.InOut, true, 0, -1, true);
+      game.add.tween(this.ghostMonster).to( { alpha: 0.4 }, 3000, Phaser.Easing.Sinusoidal.InOut, true, 0, 0, true);
+      game.add.tween(this.ghostMonster).to( { x: -150 }, 6000, Phaser.Easing.Sinusoidal.InOut, true);
+    }
+    else
+    {
+      this.ghostMonster.position.setTo(300, 100);
+      this.ghostMonster.scale.setTo(-1,1);
+      game.add.tween(this.ghostMonster.scale).to( { x: -1.1, y: 1.1 }, 1000, Phaser.Easing.Cubic.InOut, true, 0, -1, true);
+      game.add.tween(this.ghostMonster).to( { alpha: 0.4 }, 3000, Phaser.Easing.Sinusoidal.InOut, true, 0, 0, true);
+      game.add.tween(this.ghostMonster).to( { x: 150 }, 6000, Phaser.Easing.Sinusoidal.InOut, true);
+    }
+  }
+
+  hitStatic(damage)
+  {
+    if(this.alive)
+    {
+      game.camera.flash(0xBB0000, 500, true, 0.2);
+
+      this.health -= damage;
+      this.levelState.gui_HealthBar.setHealth(this.health);
+
+      this.body.moveUp(200);
+      this.setState(this.playerState_HitStatic);
+
+      if(this.health <= 0)
+      {
+        this.health = 1;
+        this.alive = false;
+        //this.setState(this.playerState_Death);
+      }
+    }
+  }
 
   hit(damage, position)
   {
@@ -118,6 +168,12 @@ class Player extends Phaser.Sprite
       {
         this.alive = false;
         this.setState(this.playerState_Death);
+      }
+
+      if(this.health < 40 && this.ghostActive)
+      {
+        this.ghostActive = false;
+        this.ghostStart();
       }
     }
   }
@@ -174,7 +230,7 @@ class Player extends Phaser.Sprite
             this.hit(15, bodyB.parent.sprite.position);
             break;
         case 'Enemy_Flyer_Bullet':
-            this.hit(7, bodyB.parent.sprite.position);
+            this.hit(5, bodyB.parent.sprite.position);
             bodyB.parent.sprite.destroyBullet();
             break;
         default:
@@ -313,8 +369,6 @@ class Player extends Phaser.Sprite
     //game.input.gamepad.reset();
     //game.input.gamepad.start();
     let pad = game.input.gamepad.pad1;
-    console.log('game.input.gamepad.pad1');
-    console.log(game.input.gamepad.pad1);
 
     let keyPad_moveLeft = pad.getButton(Phaser.Gamepad.XBOX360_DPAD_LEFT);
     keyPad_moveLeft.onDown.add(

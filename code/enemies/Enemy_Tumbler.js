@@ -5,7 +5,7 @@ class Enemy_Tumbler extends Phaser.Sprite
     super(game, x, y, '');
     this.levelState = levelState;
 
-    this.health = 10;
+    this.health = 15;
 
     this.displayObject = new Phaser.Image(game, 0, 5, 'EnemyTumbler');
     this.displayObject.anchor.setTo(0.5, 1);
@@ -47,11 +47,30 @@ class Enemy_Tumbler extends Phaser.Sprite
       part.constraint = constraint;
       this.partsArray.push(part);
     }
+
+    this.particles = game.add.emitter(this.x, this.y-40, 1);
+    this.particles.makeParticles('blood_1', [0,1,2], 10, true, true);
+    this.particles.minAngle = 180;
+    this.particles.maxAngle = 360;
+    this.particles.minSpeed = 300;
+    this.particles.maxSpeed = 600;
+    this.particles.minParticleScale = 0.5;
+    this.particles.maxParticleScale = 2;
+    this.particles.gravity = 1500;
+    this.particles.bounce.setTo(0.5, 0.5);
+    this.particles.angularDrag = 30;
+    this.particles.setAlpha(0.8, 0.0, 900);
+    this.particles.setScale(0.8, 0.1, 0.8, 0.1, 500);
+    //particles.start(true, 500, 600, 100);
   }
 
   hit(damage)
   {
+
     this.health -= damage;
+    this.particles.x = this.x;
+    this.particles.y = this.y-40;
+    this.particles.start(true, 500, 600, 100);
     if(this.health <= 0)
     {
       game.physics.p2.removeConstraint(this.partsArray[0].constraint);
@@ -65,6 +84,7 @@ class Enemy_Tumbler extends Phaser.Sprite
       this.partsArray[3].object.body.applyImpulse([0,2], 0, 0);
       this.kill();
 
+      /*
       //blood particles
       let particles = game.add.emitter(this.x, this.y-40, 1);
       particles.makeParticles('blood_1', [0,1,2], 10, true, true);
@@ -79,20 +99,22 @@ class Enemy_Tumbler extends Phaser.Sprite
       particles.angularDrag = 30;
       particles.setAlpha(0.8, 0.0, 900);
       particles.setScale(0.8, 0.1, 0.8, 0.1, 500);
-      particles.start(true, 500, 600, 100);
-
+      particles.start(true, 500, 600, 100);*/
     }
   }
 
   update()
   {
-    if(this.levelState.player.body.x > this.body.x)
+    if(Phaser.Point.distance(this.position, this.levelState.player.position) < 500)
     {
-      this.body.moveRight(50);
-    }
-    else
-    {
-      this.body.moveLeft(50);
+      if(this.levelState.player.body.x > this.body.x)
+      {
+        this.body.moveRight(50);
+      }
+      else
+      {
+        this.body.moveLeft(50);
+      }
     }
   }
 }

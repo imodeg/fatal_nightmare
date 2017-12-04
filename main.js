@@ -11,7 +11,9 @@ game.state.add('LoadingState', loadingState);
 
 game.state.add('Level01State', level01State);
 game.state.add('Level02State', level02State);
+game.state.add('Level03State', level03State);
 game.state.add('LevelFinalState', levelFinalState);
+game.state.add('levelTheEndBed', LevelTheEndBed);
 
-game.state.add('PlayLevelState', playLevelState);
+
 game.state.start('LoadingState');

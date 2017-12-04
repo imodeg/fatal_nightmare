@@ -15,6 +15,7 @@ class LevelFinalState extends Phaser.State
     this.player;
 
     this.gui_HealthBar;
+    this.boss;
   }
 
   preload()
@@ -24,6 +25,7 @@ class LevelFinalState extends Phaser.State
 
   create()
   {
+    this.soundController = new SoundController();
     game.stage.disableVisibilityChange = true;
     game.physics.startSystem(Phaser.Physics.P2JS);
     this.physMaterials = new PhysMaterials();
@@ -64,8 +66,24 @@ class LevelFinalState extends Phaser.State
     this.fade.fixedToCamera = true;
     this.fadeOut();
 
-    let text = new BitmapTextAnimated(60, 580, 'asdassdasd', 32);
-    this.guiGroup.add(text);
+    this.visualText = new BitmapTextAnimated(60, 560, 'asdassdasd', 32);
+    this.guiGroup.add(this.visualText);
+    this.visualText.setNewText('I t i s really dark here', 1000);
+    this.visualText.vanishText(4000, 1000);
+
+    this.darkScreen = new Phaser.Sprite(game, 0, 0, 'darkScreen');
+    this.darkScreen.fixedToCamera = true;
+    this.guiGroup.add(this.darkScreen);
+    this.darkScreen.alpha = (GameCfg.itemsArray.length * 12)/100;
+
+
+    this.startMusic = game.add.audio('finalMusic');
+    this.startMusic.onDecoded.add(
+      ()=>
+      {
+        this.startMusic.loopFull(0.4);
+        //this.startMusic.fadeIn(2000);
+      }, this);
     //text.setNewText('loooolllllllllllllllllllllllllll',500, true);
     //text.setNewText('ddsdsdsd',2500, false);
     //text.setNewText('loooolllllllllllllllllllllllllll',4500, true);
@@ -140,11 +158,15 @@ class LevelFinalState extends Phaser.State
       this.layerBack_Parallax_03.x = (game.camera.x/10) * this.layerBack_Parallax_03.parallaxSpeed;
       this.layerBack_Parallax_03.y = (game.camera.y/10) * this.layerBack_Parallax_03.parallaxSpeed;
     }
+
+    this.map.update();
   }
 
   shutdown()
   {
+    this.soundController.kill();
     this.player.stopPlayer();
+    this.startMusic.stop();
   }
 }
 

@@ -24,6 +24,7 @@ class Level02State extends Phaser.State
 
   create()
   {
+    this.soundController = new SoundController();
     game.stage.disableVisibilityChange = true;
     game.physics.startSystem(Phaser.Physics.P2JS);
     this.physMaterials = new PhysMaterials();
@@ -31,7 +32,7 @@ class Level02State extends Phaser.State
 
     this.layerBackground = game.add.group();
 
-    let backgroundImage = new Phaser.Image(game, 0, 0, 'BackgroundCloudy');
+    let backgroundImage = new Phaser.Image(game, 0, 0, 'Background_lvl2');
     backgroundImage.fixedToCamera = true;
     this.layerBackground.add(backgroundImage);
 
@@ -66,8 +67,14 @@ class Level02State extends Phaser.State
 
     this.visualText = new BitmapTextAnimated(60, 560, 'asdassdasd', 32);
     this.guiGroup.add(this.visualText);
-    this.visualText.setNewText('this is a very strange dream...', 1000);
+    this.visualText.setNewText('thi s i s a very strange dream...', 1000);
     this.visualText.vanishText(4000, 1000);
+
+    this.darkScreen = new Phaser.Sprite(game, 0, 0, 'darkScreen');
+    this.darkScreen.fixedToCamera = true;
+    this.guiGroup.add(this.darkScreen);
+    this.darkScreen.alpha = (GameCfg.itemsArray.length * 12)/100;
+
     /*
     var box = game.add.sprite(1000, 200, 'block');
     game.physics.p2.enable(box);
@@ -137,10 +144,12 @@ class Level02State extends Phaser.State
       this.layerBack_Parallax_03.x = (game.camera.x/10) * this.layerBack_Parallax_03.parallaxSpeed;
       this.layerBack_Parallax_03.y = (game.camera.y/10) * this.layerBack_Parallax_03.parallaxSpeed;
     }
+    this.map.update();
   }
 
   shutdown()
   {
+    this.soundController.kill();
     this.player.stopPlayer();
   }
 }

@@ -4,8 +4,8 @@ class Map
   {
     this.mapJSON = mapJSON;
     this.levelState = levelState;
-    console.log(mapJSON);
     this.imagePathArray = [];
+    this.spawnerArray = [];
     //console.log(this.getLayer('Collision'));
   }
 
@@ -151,7 +151,6 @@ class Map
 
     for (let i = 0; i < objects.length; i++)
     {
-      console.log(objects[i]);
       this.addEntity(objects[i], entitiesGroup);
     }
   }
@@ -186,7 +185,19 @@ class Map
         newEntity = new Enemy_Flyer(this.levelState, object.x, object.y);
         entitiesGroup.add(newEntity);
         break;
-        
+
+      case 'Enemy_Cat':
+        newEntity = new Enemy_Cat(this.levelState, object.x, object.y);
+        this.levelState.boss = newEntity;
+        entitiesGroup.add(newEntity);
+        break;
+
+      case 'MonsterSpawner':
+        console.log(object);
+        newEntity = new MonsterSpawner(this.levelState, object.x, object.y, object.name);
+        this.spawnerArray.push(newEntity);
+        break;
+
       case 'TriggerPlace_Win':
         //newEntity = new Enemy_Tumbler(this.levelState, object.x, object.y);
         //newEntity = new Phaser.Sprite(game, object.x, object.y, 'block');
@@ -196,6 +207,23 @@ class Map
 
         entitiesGroup.add(newEntity);
         break;
+      case 'TriggerPlace_Kill':
+        //newEntity = new Enemy_Tumbler(this.levelState, object.x, object.y);
+        //newEntity = new Phaser.Sprite(game, object.x, object.y, 'block');
+        newEntity = new TriggerPlace_Kill(this.levelState, object.x, object.y);
+        newEntity.width = object.width;
+        newEntity.height = object.height;
+        entitiesGroup.add(newEntity);
+        break;
+
+      case 'TriggerPlace_Finale':
+        newEntity = new TriggerPlace_Finale(this.levelState, object.x, object.y);
+        newEntity.width = object.width;
+        newEntity.height = object.height;
+        newEntity.isActive = true;
+        entitiesGroup.add(newEntity);
+        break;
+
 
       case 'Weapon_Katana':
         newEntity = new Weapon_Katana(this.levelState, object.x, object.y);
@@ -255,5 +283,13 @@ class Map
 
     }
     //console.log(this.imagePathArray);
+  }
+
+  update()
+  {
+    for(let i = 0; i< this.spawnerArray.length; i++)
+    {
+      this.spawnerArray[i].update();
+    }
   }
 }

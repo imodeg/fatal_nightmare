@@ -238,7 +238,7 @@ class PlayerStateJump
   start()
   {
     this.player.displayObject.state.setAnimation(0, 'JumpStart', false);
-
+    this.player.levelState.soundController.playerJump01.play();
     this.player.onPressRight.add(
       ()=>
       {
@@ -270,6 +270,7 @@ class PlayerStateJump
     this.player.onPressJump.addOnce(
       ()=>
       {
+        this.player.levelState.soundController.playerJump02.play();
         this.player.displayObject.state.setAnimation(0, 'JumpStart', false);
         this.player.body.moveUp(600);
       });
@@ -360,6 +361,7 @@ class PlayerStateKickWeapon_01 extends PlayerStateBase
 
   start()
   {
+    this.player.levelState.soundController.swordSwing01.play();
     this.timer = game.time.events.add(500,
       () =>
       {
@@ -400,6 +402,7 @@ class PlayerStateKickWeapon_01 extends PlayerStateBase
 
   hitEntity(entityBody)
   {
+    this.player.levelState.soundController.hit01.play();
     let entity = entityBody.parent.sprite;
     if(this.player.dirrection == 'right')
     { //entityBody.parent.applyImpulse([-150,1000], 0, 0);
@@ -440,6 +443,7 @@ class PlayerStateKickWeapon_02 extends PlayerStateBase
 
   start()
   {
+    this.player.levelState.soundController.swordSwing02.play();
     this.timer = game.time.events.add(120,
       () =>
       {
@@ -497,6 +501,7 @@ class PlayerStateKickWeapon_02 extends PlayerStateBase
 
   hitEntity(entityBody)
   {
+    this.player.levelState.soundController.hit02.play();
     let entity = entityBody.parent.sprite;
     this.timer = game.time.events.add(120,
       () =>
@@ -536,6 +541,7 @@ class PlayerStateKickWeapon_03 extends PlayerStateBase
 
   start()
   {
+    this.player.levelState.soundController.swordSwing01.play();
     this.timer = game.time.events.add(200,
       () =>
       {
@@ -576,6 +582,7 @@ class PlayerStateKickWeapon_03 extends PlayerStateBase
 
   hitEntity(entityBody)
   {
+    this.player.levelState.soundController.hit01.play();
     let entity = entityBody.parent.sprite;
     this.timer = game.time.events.add(120,
       () =>
@@ -612,12 +619,61 @@ class PlayerStateHit
 
   start()
   {
+    let genereteNum = game.rnd.integerInRange(1, 2);
+    if(genereteNum == 1)
+    {
+      this.player.levelState.soundController.playerHit01.play();
+    }
+    else
+    {
+      this.player.levelState.soundController.playerHit02.play();
+    }
     this.player.displayObject.state.setAnimation(0, 'Hit', false);
     //this.player.body.moveLeft(300);
     this.timer = game.time.events.add(500,
       () =>
       {
         this.player.setState(this.player.playerState_Idle);
+      }, this);
+  }
+
+  update()
+  {
+
+  }
+
+  clear()
+  {
+    game.time.events.remove(this.timer);
+  }
+}
+
+class PlayerStateHitStatic
+{
+  constructor(player)
+  {
+    this.player = player;
+    this.isMovable = false;
+    this.timer = null;
+  }
+
+  start()
+  {
+    let genereteNum = game.rnd.integerInRange(1, 2);
+    if(genereteNum == 1)
+    {
+      this.player.levelState.soundController.playerHit01.play();
+    }
+    else
+    {
+      this.player.levelState.soundController.playerHit02.play();
+    }
+    this.player.displayObject.state.setAnimation(0, 'Hit', false);
+    //this.player.body.moveLeft(300);
+    this.timer = game.time.events.add(600,
+      () =>
+      {
+        this.player.displayObject.state.setAnimation(0, 'Idle', true);
       }, this);
   }
 
@@ -646,11 +702,15 @@ class PlayerStateDeath
     this.player.displayObject.state.setAnimation(0, 'Death', false);
     game.camera.fade(0x000000, 2000, true);
     //this.player.body.moveLeft(300);
-    this.timer = game.time.events.add(2000,
-      () =>
+    game.camera.onFadeComplete.addOnce(
+      ()=>
       {
         game.state.start(game.state.current);
-      }, this);
+      });
+    //this.timer = game.time.events.add(2000,
+    //  () =>
+    //  {
+    //  }, this);
   }
 
   update()

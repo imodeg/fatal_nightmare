@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="2017.07.25" orientation="orthogonal" renderorder="right-down" width="1" height="1" tilewidth="3560" tileheight="5000" nextobjectid="284">
+<map version="1.0" tiledversion="2017.07.25" orientation="orthogonal" renderorder="right-down" width="1" height="1" tilewidth="3860" tileheight="5300" nextobjectid="300">
  <tileset firstgid="1" name="Decoretions" tilewidth="1026" tileheight="726" tilecount="97" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
   <tile id="3">
@@ -513,9 +513,6 @@
    <image source="d:/CONTENT/PROJECTS/LudumDare/levels/graphics/r_16.png"/>
   </tile>
  </tileset>
- <imagelayer name="Image Layer 1" locked="1">
-  <image source="levelBack.png" width="3560" height="5000"/>
- </imagelayer>
  <objectgroup color="#000000" name="BackColor" locked="1">
   <object id="232" x="3284" y="4680">
    <properties>
@@ -662,11 +659,17 @@
   </properties>
  </objectgroup>
  <objectgroup name="Entity">
-  <object id="88" type="Player" x="2926.05" y="4456.08"/>
+  <object id="88" type="Player" x="2924.55" y="4465.33"/>
   <object id="209" type="Weapon_Katana" x="1460.83" y="3773.5"/>
   <object id="256" name="item_1" type="ItemObject" x="1704.67" y="2110.33"/>
   <object id="267" name="item_2" type="ItemObject" x="1620.67" y="4525.66"/>
-  <object id="268" name="LevelFinalState" type="TriggerPlace_Win" x="2982" y="1324" width="212" height="398.667"/>
+  <object id="268" name="Level03State" type="TriggerPlace_Win" x="2982" y="1324" width="212" height="398.667"/>
+  <object id="286" name="item_3" type="ItemObject" x="628.67" y="1821"/>
+  <object id="294" name="Enemy_Tumbler" type="MonsterSpawner" x="1374.67" y="2666.67"/>
+  <object id="295" name="Enemy_Tumbler" type="MonsterSpawner" x="1520" y="2202.67"/>
+  <object id="297" type="TriggerPlace_Kill" x="3294" y="4660" width="582" height="274"/>
+  <object id="298" type="TriggerPlace_Kill" x="-206.061" y="4442.42" width="582" height="274"/>
+  <object id="299" name="Enemy_Spider" type="MonsterSpawner" x="2466" y="1494"/>
  </objectgroup>
  <objectgroup name="Collision" locked="1">
   <object id="196" x="2917" y="4485.5">

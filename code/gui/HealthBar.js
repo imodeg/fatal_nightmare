@@ -4,6 +4,7 @@ class HealthBar extends Phaser.Sprite
   {
     super(game, x, y, '');
     this.fixedToCamera = true;
+    this.levelState = levelState;
 
     this.healthBar_line = new Phaser.Sprite(game, 0, 0, 'healthBar_line');
     this.addChild(this.healthBar_line);
@@ -24,6 +25,25 @@ class HealthBar extends Phaser.Sprite
   {
     health = health/100;
     this.healthBar_line.scale.x = health;
+  }
+
+  hitPlayer()
+  {
+    let playerPosX = this.levelState.player.x - this.x;
+    let playerPosY = this.levelState.player.y - this.y-40;
+    let tween1 = game.add.tween(this.healthBar_front.anchor).to( { x: 0.2, y: 0.5}, 400, Phaser.Easing.Sinusoidal.InOut, true)
+
+    let tween2 = game.add.tween(this.healthBar_front).to( { angle: 80}, 700, Phaser.Easing.Sinusoidal.InOut, false)
+                                                     .to( { angle: 60}, 700, Phaser.Easing.Sinusoidal.InOut, true);
+
+
+    let tween3 = game.add.tween(this.healthBar_front).to( { x: playerPosX, y: playerPosY}, 700, Phaser.Easing.Sinusoidal.In, true, 1400);
+    tween3.onComplete.addOnce(
+      ()=>
+      {
+        this.levelState.player.hitStatic(1);
+        this.healthBar_front.kill();
+      });
   }
 
   update()

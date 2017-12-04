@@ -15,6 +15,7 @@ class LoadingState extends Phaser.State
       });
     game.load.image('loadingBar', 'graphics/Gui/LoadingBar.png');
     game.load.image('logo', 'graphics/Gui/logo.png');
+    game.load.image('mainBack', 'graphics/Gui/MainBack.png');
     game.load.audio('menuMusic', 'audio/menuMusic.mp3');
     game.load.image('EnemyGhost', 'graphics/Monster/Enemy_Ghost.png');
   }
@@ -22,6 +23,8 @@ class LoadingState extends Phaser.State
   create()
   {
     game.stage.backgroundColor = '#330000'; //TODO black
+    let backImage =  game.add.sprite(0, 640, 'mainBack');
+    backImage.anchor.y = 1;
 
     let logo =  game.add.sprite(GameCfg.width/2, 20, 'logo');
     logo.anchor.setTo(0.5,0);
@@ -33,7 +36,6 @@ class LoadingState extends Phaser.State
     this.startMusic.onDecoded.add(
       ()=>
       {
-        this.startMusic.loopFull(1);
         this.startMusic.fadeIn(2000);
       }, this);
 
@@ -90,6 +92,7 @@ class LoadingState extends Phaser.State
     game.load.image('healthBar_line', 'graphics/Gui/healthBar_line.png');
     game.load.image('item_cell', 'graphics/Gui/item_cell.png');
     game.load.bitmapFont('mainfont', 'graphics/Gui/ludumFont_0.png', 'graphics/Gui/ludumFont.xml');
+    game.load.image('darkScreen', 'graphics/Gui/darkScreen.png');
 
     game.load.spritesheet('blood_1', 'graphics/Elements/blood_1.png', 80, 80);
     game.load.image('catana_back', 'graphics/Elements/catana_back.png');
@@ -101,6 +104,8 @@ class LoadingState extends Phaser.State
     game.load.image('item_4', 'graphics/Elements/item_ring.png');
     game.load.image('item_5', 'graphics/Elements/item_shoes.png');
     game.load.image('item_6', 'graphics/Elements/item_shoes_2.png');
+    game.load.image('item_7', 'graphics/Elements/item_purse.png');
+    game.load.image('item_8', 'graphics/Elements/item_pendant.png');
     game.load.image('star', 'graphics/Elements/star.png');
 
     game.load.image('EnemyTumbler', 'graphics/Monster/EnemyTumbler.png');
@@ -110,12 +115,16 @@ class LoadingState extends Phaser.State
 
     game.load.spine('EnemySpider', 'graphics/Monster/spiderhead_animation.json');
     game.load.spine('EnemyFlyer', 'graphics/Monster/goblinsmall.json');
+    game.load.spine('EnemyCat', 'graphics/Monster/Enemy_Cat.json');
     game.load.image('enemyBullet', 'graphics/Monster/enemyBullet.png');
 
     //game.load.json('map', 'levels/Level_final.json');
     game.load.json('map01', 'levels/Level_01.json');
     game.load.json('map02', 'levels/Level_02.json');
+    game.load.json('map03', 'levels/Level_03.json');
     game.load.json('mapFinal', 'levels/Level_final.json');
+    game.load.json('mapBed', 'levels/Level_TheEndBed.json');
+
 
     game.load.image('graphics/Dirt_01.png', 'levels/graphics/Dirt_01.png');
     game.load.image('graphics/Dirt_02.png', 'levels/graphics/Dirt_02.png');
@@ -143,6 +152,8 @@ class LoadingState extends Phaser.State
     game.load.image('block', 'graphics/block.png');
 
     game.load.image('BackgroundCloudy', 'graphics/Background/Background_Cloudy.png');
+    game.load.image('Background_lvl2', 'graphics/Background/Background_lvl2.png');
+    game.load.image('Background_lvl3', 'graphics/Background/Background_lvl3.png');
     game.load.image('BackCloud_01', 'graphics/Background/Cloud_01.png');
     game.load.image('BackCloud_02', 'graphics/Background/Cloud_02.png');
     game.load.image('BackCloud_03', 'graphics/Background/Cloud_03.png');
@@ -242,11 +253,50 @@ class LoadingState extends Phaser.State
     game.load.image('graphics/darkblock_10.png', 'levels/graphics/darkblock_10.png');
     game.load.image('graphics/darkblock_11.png', 'levels/graphics/darkblock_11.png');
 
+    game.load.image('graphics/3lvl_2back_06.png', 'levels/graphics/3lvl_2back_06.png');
+    game.load.image('graphics/3lvl_2back_07.png', 'levels/graphics/3lvl_2back_07.png');
+    game.load.image('graphics/3lvl_3back_08.png', 'levels/graphics/3lvl_3back_08.png');
+    game.load.image('graphics/3lvl_3back_09.png', 'levels/graphics/3lvl_3back_09.png');
+    game.load.image('graphics/3lvl_3back_10.png', 'levels/graphics/3lvl_3back_10.png');
+    game.load.image('graphics/3lvl_3back_11.png', 'levels/graphics/3lvl_3back_11.png');
+    game.load.image('graphics/3lvl_back_01.png', 'levels/graphics/3lvl_back_01.png');
+    game.load.image('graphics/3lvl_back_02.png', 'levels/graphics/3lvl_back_02.png');
+    game.load.image('graphics/3lvl_back_03.png', 'levels/graphics/3lvl_back_03.png');
+    game.load.image('graphics/3lvl_back_04.png', 'levels/graphics/3lvl_back_04.png');
+    game.load.image('graphics/3lvl_most1.png', 'levels/graphics/3lvl_most1.png');
+    game.load.image('graphics/3lvl_most2.png', 'levels/graphics/3lvl_most2.png');
+    game.load.image('graphics/3lvl_most3.png', 'levels/graphics/3lvl_most3.png');
+    game.load.image('graphics/3lvl_2back_05.png', 'levels/graphics/3lvl_2back_05.png');
+    game.load.image('graphics/badface01.png', 'levels/graphics/badface01.png');
+    game.load.image('graphics/eye3.png', 'levels/graphics/eye3.png');
+    game.load.image('graphics/eye.png', 'levels/graphics/eye.png');
+
+    game.load.image('graphics/item_dimond.png', 'levels/graphics/item_dimond.png');
+    game.load.image('graphics/item_money.png', 'levels/graphics/item_money.png');
+    game.load.image('graphics/item_perfume.png', 'levels/graphics/item_perfume.png');
+    game.load.image('graphics/item_ring.png', 'levels/graphics/item_ring.png');
+    game.load.image('graphics/item_shoes.png', 'levels/graphics/item_shoes.png');
+    game.load.image('graphics/item_shoes_2.png', 'levels/graphics/item_shoes_2.png');
+
     game.load.image('graphics/ground1.png', 'levels/graphics/ground1.png');
     game.load.image('graphics/ground2.png', 'levels/graphics/ground2.png');
     game.load.image('graphics/ground3.png', 'levels/graphics/ground3.png');
 
-    game.load.audio('startGameSfx', 'audio/startGame.wav');
+    game.load.audio('finalMusic', 'audio/finalMusic.mp3');
+    game.load.audio('startGameSfx', 'audio/startGame.mp3');
+    game.load.audio('hit01Sfx', 'audio/hit01.mp3');
+    game.load.audio('hit02Sfx', 'audio/hit01.mp3');
+    game.load.audio('swordSwing01Sfx', 'audio/swordSwing01.mp3');
+    game.load.audio('swordSwing02Sfx', 'audio/swordSwing02.mp3');
+    game.load.audio('takeItemSfx', 'audio/takeItem.mp3');
+    game.load.audio('monsterDeathSfx', 'audio/monsterDeath.mp3');
+
+    game.load.audio('playerJump01Sfx', 'audio/PlayerJump01.mp3');
+    game.load.audio('playerJump02Sfx', 'audio/PlayerJump02.mp3');
+    game.load.audio('playerHit01Sfx', 'audio/PlayerHit01.mp3');
+    game.load.audio('playerHit02Sfx', 'audio/PlayerHit02.mp3');
+    game.load.audio('playerYawnSfx', 'audio/PlayerYawn.mp3');
+    game.load.audio('playerTakeWeaponSfx', 'audio/takeWeapon.mp3');
 
     game.load.start();
   }
@@ -296,6 +346,9 @@ class LoadingState extends Phaser.State
       {
         this.startMusic.stop();
         game.state.start('Level01State');
+        //game.state.start('Level03State');
+        //game.state.start('LevelFinalState');
+        //game.state.start('levelTheEndBed');
       });
 
       game.load.onLoadStart.removeAll();

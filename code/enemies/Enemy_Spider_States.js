@@ -122,7 +122,6 @@ class Enemy_SpiderStateKick extends Enemy_SpiderStateBase
   start()
   {
     this.monster.displayObject.state.setAnimation(0, 'attack', false);
-    console.log('1111');
 
     this.timerSetHitShape = game.time.events.add(200,
       () =>
@@ -224,6 +223,7 @@ class Enemy_SpiderStateDeath extends Enemy_SpiderStateBase
 
   start()
   {
+    this.monster.levelState.soundController.monsterDeath.play();
     this.monster.displayObject.state.setAnimation(0, 'death', false);
     this.timer = game.time.events.add(200,
       () =>
@@ -245,6 +245,17 @@ class Enemy_SpiderStateDeath extends Enemy_SpiderStateBase
   deathShapeApply()
   {
     this.monster.body.clearShapes();
-    this.monster.mainBodyShape = this.monster.body.addRectangle(10, 10, 0, 0, 0); //main body shape
+    this.monster.bottomContactShape = this.monster.body.addCircle(10, 0, 0, 0);
+    this.timer = game.time.events.add(600,
+      () =>
+      {
+        let alphaTween = game.add.tween(this.monster.displayObject.scale).to( { x: 0, y: 0 }, 1000, Phaser.Easing.Linear.InOut, true);
+        alphaTween.onComplete.addOnce(
+          ()=>
+          {
+            this.monster.kill();
+          });
+      });
+    //this.monster.mainBodyShape = this.monster.body.addRectangle(10, 10, 0, 0, 0); //main body shape
   }
 }

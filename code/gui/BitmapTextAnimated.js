@@ -21,8 +21,12 @@ class BitmapTextAnimated extends Phaser.BitmapText
 
   vanishText(delay = 0, time = 100)
   {
-    let appearAlphaTween = game.add.tween(this);
-    appearAlphaTween.to({alpha: 0}, time, Phaser.Easing.Sinusoidal.Out, true, delay);
+    this.timerVanish = game.time.events.add(delay,
+      () =>
+      {
+        let appearAlphaTween = game.add.tween(this);
+        appearAlphaTween.to({alpha: 0}, time, Phaser.Easing.Sinusoidal.Out, true);
+      }, this);
   }
 
   setNewText(text, delay = 0, isEvil = false)
